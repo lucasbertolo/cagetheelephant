@@ -1,0 +1,149 @@
+@media screen and (max-width: 768px) {
+	body{ overflow: hidden;}
+	
+	/* NAV INFERIOR */
+	#nome-musica { font-size: 1em; margin-top: 18px; }
+	#disco-musica{ font-size: 0.7em;}
+	.controls{ font-size: 1.3em;}
+	.controls i { margin-right: 0px; margin-left: 3px; z-index: 1;}
+	
+	/* LOGO HOME */
+	.moon { margin-top: 30%; }
+	#logo { display: none;}
+	.title:before{ border: none;}
+	.title:after{ border: none;}
+	
+	/* SOBRE */
+.content-sobre {
+	width: 99%;
+	min-height: 38%;
+	max-height: 43%;
+	margin-left: -12px;
+	margin-top: 10%;
+}
+
+.historia { margin-top: 20px; margin-bottom: 40px; font-size: 0.8em; padding: 7px; }
+
+.numero-colunas{
+   -moz-column-count: 1;
+   -webkit-column-count: 1;
+}
+
+/* MEMBROS */
+.content-membros {
+	width: 85%;
+	margin-bottom: 50px;
+	min-height: 300px;
+}
+#n1 { margin-top: 100px;} 
+
+.bl-membro { height: 19%;}
+
+.pseudo {
+    margin: 10px;
+    padding: 30px;
+}
+
+.pseudo:before { 
+    border: 3px solid #000; 
+    top: -5px; 
+    bottom: -5px; 
+    left: -5px; 
+    right: -5px; 
+}
+
+.pseudo p { 
+	font-size: 0.8em;
+	margin-top: 8px;
+}
+
+#img-member { border-radius: 0; width: 140px}
+
+/* DISCOGRAFIA */
+
+.content-discografia { height: 700px; margin-top: 50px;}
+
+.container-discografia{	margin-top: 22%;}
+
+.disco-img{
+	-webkit-filter: grayscale(1);
+	cursor: pointer;
+	transition: all .5s ease;
+	border-radius: 70%;
+	width: 160px;
+	height: 200px;
+	border: 2px solid black;
+}
+
+/* Calendario */
+
+.content-calendario{
+	width: 99%;
+	margin-left: -20px;
+}
+
+.content-calendario:before {border: none; }
+
+.content-calendario:after { border: none; }
+
+#alt-esq, #alt-dir{
+	width: 15%;
+	height: 80%;
+	font-size: 6em;
+	text-align: center;
+	color: rgba(0,0,0,0.7);
+	position: absolute;
+}
+
+#alt-esq{ top: 21%; left: 0; }
+#alt-dir{ top: 21%; right: 0; }
+
+.modulo-show {
+	width: 55%;
+	height: 40%;
+	position: absolute;
+	left: 22%;
+	top: 1%;
+	margin-top: 0px;
+	
+}
+
+.descr-show { 
+	width: 55%;
+	min-height: 38%;
+	text-align: center;
+	top: 40%;
+	left: 22%;
+	margin-top: 0;
+	position: absolute;
+}
+
+.info-show h3{ font-size: 4.7em;}
+.info-show h4 { font-size: 1.7em;}
+.info-show h5 { font-size: 1em; }
+
+/* Contato */
+.content-contato{display: none;}
+
+.content-contato-mobile{
+	background-color: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 100%;
+	margin-top: 4%;
+	position: absolute;
+	margin-left: -3%;
+	font-family: 'CaviarDreams';
+	display: block;
+	color: white;
+}
+
+.links {
+	margin-top: 40px;
+	margin-bottom: 30px;	
+	color: white;
+	font-size: 2.2em;
+}
+
+
+
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>SPES</title>	
+	<meta charset="utf-8" />
+  	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index-mobile.css">
+    <link rel="stylesheet" href="scroll/jquery.mCustomScrollbar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>     
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="index.js"></script> 
+    <script src="scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy">
+
+<!-- MENU PARA CELULARES -->
+<nav class="navbar navbar-inverse hidden-lg hidden-sm hidden-md" style="margin-bottom: 0px; background-color: rgba(0,0,0,0.7); font-family: 'Optimus'; position: fixed; top: 0; left: 0; width: 100%; z-index: 1;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="font-size: 1.5em; color: rgba(255,128,0,0.7); font-weight: bold;">Cage The Elephant</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav" style="font-size: 1.1em;">
+      	<li><a href="#sobre">Who we are</a></li>
+        <li><a href="#membros">Our Guys</a></li>
+        <li><a href="#discografia">Disco</a></li>
+        <li><a href="#calendario">Tour</a></li>
+        <li><a href="#contato">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Video background -->
+<video autoplay onended="videoPlay()" class="bg_video" id="video">
+	 <source id='mp4Source' src="videos/video1.mp4" type="video/mp4" />
+</video>
+
+<!-- Menu inferior -->
+<div class="nav-inferior container-fluid ">
+	<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs social">
+    	<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-tumblr" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+	</div>
+    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 music">
+    	<h3 id="nome-musica">Cigarrete Daydreams</h3>
+        <h5 id="disco-musica">Melophobia</h5>
+    </div>
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 controls text-right">
+    	<span id="play"><i class="fa fa-pause" aria-hidden="true"></i></span>
+        <span id="back"><i class="fa fa-backward" aria-hidden="true"></i></span>
+		<span id="forward"><i class="fa fa-forward" aria-hidden="true"></i></span>		
+		<span id="volume"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+    </div>
+</div>
+
+	<!-- Menu Lateral -->
+<nav class="navegador hidden-xs container-fluid " id="myScrollspy">
+	<a href="#home">
+	<div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>Home</h4>"> 
+  		<i class="fa fa-circle fa-stack-2x icon-background"></i>
+        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-home"></i>
+  		<i class="fa fa-home fa-stack-1x link"></i>
+	</div>
+    </a>
+    <a href="#sobre">
+    <div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>About us</h4>">
+  		<i class="fa fa-circle fa-stack-2x icon-background"></i>
+        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-sobre"></i>
+  		<i class="fa fa fa-rocket fa-stack-1x link"></i>
+	</div>
+    </a>
+    <a href="#membros">
+    <div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>Members</h4>">
+  		<i class="fa fa-circle fa-stack-2x icon-background"></i>
+        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-membros"></i>
+  		<i class="fa fa fa-star fa-stack-1x link" ></i>
+	</div>
+    </a>
+    <a href="#discografia">
+    <div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>Disco</h4>">
+  		<i class="fa fa-circle fa-stack-2x icon-background"></i>
+        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-disco"></i>
+  		<i class="fa fa-headphones fa-stack-1x link"></i>
+	</div>
+    </a>
+    <a href="#calendario">
+    <div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>Calendar</h4>">
+  		<i class="fa fa-circle fa-stack-2x icon-background"></i>
+        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-calendar"></i>
+  		<i class="fa fa-calendar fa-stack-1x link"></i>
+	</div>
+    </a>
+    <a href="#contato">
+    <div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>Contact</h4>">
+  		<i class="fa fa-circle fa-stack-2x icon-background"></i>
+        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-contato"></i>
+  		<i class="fa fa-info fa-stack-1x link" ></i>
+	</div>
+	</a>
+</nav>
+
+
+<div class="container-fluid" id="wrapper">
+
+    <!-- Home -->
+	<div class="col-lg-12" id="home">
+    	<div class="moon"></div>
+        <div class="title">
+       		<h1 id="logo">Cage The Elephant</h1>
+        </div>
+    </div>
+    
+    <div class="col-lg-12" id="sobre">
+    	<div class="container-fluid content-sobre">
+        	<p class="numero-colunas historia"><span style="font-family: Optimus; color: rgba(255,92,15,1); font-size: 1.4em; font-weight: bold;">Cage the Elephant is an American rock band from Bowling Green, Kentucky, that formed in 2006 and moved to London, England before their first album was released in 2008.</span> <br /><br /><br /> The group currently consists of vocalist Matthew Shultz, rhythm guitarist Brad Shultz, drummer Jared Champion and bassist Daniel Tichenor, as well as touring keyboardist/guitarist Matthan Minster and touring lead guitarist Nick Bockrath. Lincoln Parish served as the band's lead guitarist from their formation in 2006 until December 2013, when he left on good terms to pursue a career in producing. The band's first album, Cage the Elephant, was released in 2008 to much success, spawning several successful radio singles and gained the band a large following in both the United States and the United Kingdom.<br /><br /><br />
+
+Cage the Elephant are known for energetic live performances and for possessing an eclectic sound. The band's first album is influenced by classic rock, funk, and blues music. However, the band's second album, Thank You, Happy Birthday, displayed heavy influence by punk rock and bands such as the Pixies and Nirvana, while Melophobia was a concerted effort by the band to find its own distinct musical identity, and earned them a Grammy Award nomination in 2015 for Best Alternative Music Album. Cage the Elephant's fourth album, Tell Me I'm Pretty, produced by Dan Auerbach, was released on December 18, 2015.</p>
+        </div>
+ 	</div>
+    
+    
+    <!-- Membros -->
+  	<div class="col-lg-12" id="membros">
+    	<div class="container-fluid content-membros">
+        	<div class="row" id="n1">
+            
+        		<div class="bl-membro col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                <a data-toggle="modal" data-target="#biografia">
+                	<div class="pseudo" id="member-1">
+                		<p class="typing">Brad Shultz</p>
+                	</div>
+                </a>
+            	</div>
+               <div class="bl-membro col-lg-6 col-sm-6 col-md-6 col-xs-6">
+               <a data-toggle="modal" data-target="#biografia">
+                	<div class="pseudo" id="member-2">
+                		<p class="typing">Daniel Tichenor</p>
+                	</div>
+                </a>
+            	</div>                
+            </div>
+            <div class="row">
+            	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+				<div class="bl-membro col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                <a data-toggle="modal" data-target="#biografia">
+                	<div class="pseudo" id="member-3">
+                		<p class="typing">Jared Champion</p>
+                	</div>
+                </a>
+            	</div>              
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3"></div>
+            <div class="row">
+				<div class="bl-membro col-lg-6 col-sm-6 col-md-6 col-xs-6">
+                <a data-toggle="modal" data-target="#biografia">
+                	<div class="pseudo" id="member-4">
+                		<p class="typing">Matthan Minster</p>
+                	</div>
+                </a>
+            	</div>
+				<div class="bl-membro col-lg-6 col-sm-6 col-md-6 col-xs-6" id="member-5">
+                <a data-toggle="modal" data-target="#biografia">
+                	<div class="pseudo">
+                		<p class="typing">Matt Shultz</p>
+                	</div>
+                </a>
+            	</div>
+            </div>        
+        </div>
+        </div>
+ 	</div>  
+    
+    <!-- Modal membros -->
+    <div class="modal fade" id="biografia" tabindex="-1" role="dialog" aria-labelledby="nameMember" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="background-color: rgba(0,0,0,0.7)">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h3 class="modal-title" id="nameMember">Matthew Shultz</h3>
+                    </div>
+                <div class="modal-body">
+                    <center>
+                    <img src="https://imageshack.com/i/po27RyXMj" name="aboutme" border="0" id="img-member"></a>
+                    <h3 class="media-heading" style="margin-top: 9px" id="job">Vocal</h3>
+                    </center>
+                    <hr>
+                    <center>
+                    <p><strong>Biography </strong><br /><br />
+                       <span id="bio">Matt grew up in Bowling Green, Kentucky, with his brother, Brad, who is a year older and also in Cage the Elephant. They came from a poor background and were sometimes teased for this. Brad was called 'Poor Boy' by kids at their school. Their dad, a musician, is also called Brad and their parents separated when the brothers were young. After the divorce, their mother dated Matt's football coach leading him to quit the team and play music in a state of rebellion.<br />
+
+Matt married his fiancé Juliette Buchs, French actress and model, at the beginning of 2014 in a civil ceremony in the Warren County Courthouse, Bowling Green. They celebrated the marriage in August of the same year with family and friends in Rennes, France- where Juliette is from and a later celebration in America in October..</span></p>
+                    <br>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" style="color: black">OK</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Disco -->
+    <div class="col-lg-12" id="discografia">
+    	<div class="content-discografia container-fluid">        	
+        	<div class="container-discografia">
+        		<div id="carousel">
+						<figure><a data-toggle="modal" data-target="#modalDisco"><img src="http://imageshack.com/a/img922/5416/k6J6Bs.png" alt="disco" class="disco-img" id="disco-1"></a></figure>
+						<figure><a data-toggle="modal" data-target="#modalDisco"><img src="http://imageshack.com/a/img923/97/h1Vqpv.png" alt="disco" class="disco-img" id="disco-2"></a></figure>
+						<figure><a data-toggle="modal" data-target="#modalDisco"><img src="http://imageshack.com/a/img922/624/Zgb9cm.png" alt="disco" class="disco-img" id="disco-3"></a></figure>
+						<figure><a data-toggle="modal" data-target="#modalDisco"><img src="http://imageshack.com/a/img921/7439/6ojyMP.png" alt="disco" class="disco-img" id="disco-4"></a></figure>
+				</div>
+        	</div>
+ 	</div>
+    </div>
+    
+    <!-- modal Disco -->
+    <div class="modal fade" id="modalDisco" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="background-color: rgba(0,0,0,0.7)">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+          <h3 class="modal-title" style="text-align: center" id="title-disco">Tell Me I'm Pretty</h3>
+        </div>
+        <div class="modal-body">
+        
+        <table id="musics">        
+		
+  		<tr>        	
+    		<td>Cry Baby</td>
+    		<td><i class="fa fa-download" aria-hidden="true"></i></td>           
+  		</tr>
+  		<tr>
+    		<td>Mess Around</td>
+    		<td><i class="fa fa-download" aria-hidden="true"></i></td>
+      	</tr>
+      	<tr>
+        	<td>Sweetie Little Jean</td>
+        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
+      	</tr>
+      	<tr>
+        	<td>Too Late To Say Goodbye</td>
+        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
+      	</tr>
+      	<tr>
+        	<td>Cold Cold Cold</td>
+        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
+      	</tr>
+      	<tr>
+        	<td>Trouble</td>
+        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
+      	</tr>
+      	<tr>
+        	<td>How Are You True</td>
+        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
+      	</tr>
+      	<tr>
+        	<td>That's Right</td>
+        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
+      	</tr>
+      	<tr>
+        	<td>Punchin' Bag</td>
+        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
+      	</tr>
+      	<tr>
+        	<td>Portuguese Knife Fight</td>
+        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
+      	</tr>
+    </table>
+
+        </div>
+        <div class="modal-footer">
+        	<center>
+          		<a href="http://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009" id="link-album" target="_blank">														             		<button type="button" class="btn btn-default">Buy Album</button>
+                </a>
+          	</center>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+      
+      <!-- Calendario -->
+    
+    <div class="col-lg-12" id="calendario">
+    	<div class="content-calendario container-fluid">
+        	<div id="alt-esq">
+            	<i class="fa fa-chevron-left" aria-hidden="true" id="seta-esq"></i>
+            </div>
+        	<div class="modulo-show" id="googleMap">
+            </div>
+            <div class="descr-show">
+            	<div class="info-show">
+            		<h3 id="data-show">24 Sep</h3>
+                	<h4 id="nome-show">Daytime Village</h4>
+                	<h5 id="local-show">Las Vegas, NV, US</h5>
+                </div>
+            </div>
+            <div id="alt-dir">
+            	<i class="fa fa-chevron-right" aria-hidden="true" id="seta-dir"></i>
+            </div>
+        </div>
+    	
+ 	</div>
+    
+    <!-- Contato -->
+    <div class="col-lg-12" id="contato">
+    	<div class="content-contato container-fluid">
+        
+		<div id="wrap">	
+		<h1>Contact Us</h1>
+
+		<div id='form_wrap'>
+		<form >
+			<p>Dear Cage,</p>
+			<label for="email">Your Message: </label>
+			<textarea  name="message" value="Your Message" id="message"></textarea>
+			<p>Best,</p>
+            
+			<label for="name">Name: </label>
+			<input type="text" name="name" value="" id="name" required />
+
+			<label for="email">Email: </label>
+			<input type="email" name="email" value="" id="email" class="col-lg-12" required />
+            
+			<input type="submit" name ="submit" value="Send, we'll contact you soon!" />
+
+		</form>
+		
+		</div>
+	
+		</div>
+
+
+        </div>
+        
+        <div class="container-fluid bg-grey content-contato-mobile">
+	<h2 class="text-center" style="margin-bottom: 40px; margin-top: 38px;" >CONTATO</h2>
+	  <div class="row">
+    <div class="col-sm-5 col-xs-5">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> São Paulo, Br</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> xena-princesa-guerreira.com</p> 
+    </div>
+    <div class="col-sm-7 col-xs-7">
+      <div class="row">
+        <form method="post" action="dados-form.php">
+        <div class="col-sm-6 col-xs-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 col-xs-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>x
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 col-xs-12 form-group">
+          <button class="btn btn-default " type="submit">Send</button>
+        </div>        
+      </div> 
+    </div>
+    </form>
+    <div class="container-fluid ">
+    	<div class="row links">
+        	<div class="col-xs-3">
+            	<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+            </div>
+            <div class="col-xs-3">
+            	<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+            </div>
+            <div class="col-xs-3">
+            	<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+            </div>
+            <div class="col-xs-3">
+            	<i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>	
+    
+</div>
+
+
+
+</body>
+</html>
