@@ -1,0 +1,32 @@
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+    
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}    
+
+.typewritter {
+    animation: typing 3.5s steps(40, end);
+}
+
+.rotation {
+    animation: rotation 20s infinite linear;
+
+    &:hover{
+        animation-play-state: paused;
+    }
+}

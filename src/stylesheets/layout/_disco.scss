@@ -1,0 +1,95 @@
+/* Disco */
+
+#disco {
+    section {
+        display: flex;
+        flex-direction: column;
+
+        .container-disco {
+            margin: 4% auto;
+            width: 210px;
+            height: 140px;
+            position: relative;
+            perspective: 1000px;
+            margin-top: 14%;
+        }
+
+        #carousel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+
+            figure {
+                display: block;
+                position: absolute;
+                width: 80%;
+                height: 50%px;
+                left: 10px;
+                top: 10px;
+
+                &:nth-child(1) {
+                    transform: rotateY(0deg) translateZ(288px);
+                }
+
+                &:nth-child(2) {
+                    transform: rotateY(90deg) translateZ(288px);
+                }
+
+                &:nth-child(3) {
+                    transform: rotateY(180deg) translateZ(288px);
+                }
+
+                &:nth-child(4) {
+                    transform: rotateY(270deg) translateZ(288px);
+                }
+            }
+        }
+
+        .disco-img {
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+            cursor: pointer;
+            transition: all 0.5s ease;
+            border-radius: 70%;
+            width: 260px;
+            height: 300px;
+            border: 2px solid black;
+
+            &:hover {
+                -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+            }
+        }
+    }
+
+}
+
+/* modal disco */
+
+#modalDisco {
+    color: white;
+}
+
+#musics {
+    border-collapse: collapse;
+    width: 100%;
+    cursor: pointer;
+}
+
+#musics td {
+    padding: 8px;
+}
+
+#musics tr:nth-child(even) {
+    background-color: rgba(255, 149, 43, 0.7);
+}
+
+#musics tr:hover {
+    background-color: rgba(228, 228, 228, 0.4);
+}
+
+#musics td:nth-child(1):before {
+    counter-increment: section;
+    content: counter(section) " - ";
+}

@@ -1,6 +1,4 @@
-/* eslint-disable no-undef */
-// eslint-disable-next-line import/extensions
-import { disco } from '../assets/sources.js';
+import { disco } from '../assets/sources';
 
 export const setDisco = (index) => () => {
   $('#title-disco').html(disco[index].title);

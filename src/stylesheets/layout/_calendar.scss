@@ -1,0 +1,77 @@
+/* Calendar */
+
+#calendar {
+    section {
+        #decrease-concert,
+        #increase-concert {
+            width: 15%;
+            height: 80%;
+            float: left;
+            font-size: 6em;
+            text-align: center;
+            color: rgba(0, 0, 0, 0.7);
+            margin-top: 23%;
+        }
+
+        #arr-dec:hover,
+        #arr-inc:hover {
+            color: rgba(191, 0, 0, 0.7);
+            cursor: pointer;
+        }
+
+        .container-map {
+            width: 30%;
+            height: 80%;
+            border: 2px solid orange;
+            margin-top: 5%;
+            float: left;
+            border: solid 2px rgba(191, 0, 0, 0.7);
+        }
+
+        .descr-show {
+            width: 30%;
+            min-height: 40%;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: solid 2px rgba(191, 0, 0, 0.7);
+            border-left: none;
+            margin-top: 15%;
+            float: left;
+            text-align: right;
+        }
+
+        .info-show {
+
+            h3,
+            h4,
+            h5 {
+                margin: 10px;
+                color: red;
+            }
+
+            h3 {
+                font-size: 5em;
+                font-weight: bold;
+            }
+
+            h4 {
+                font-size: 2em;
+                color: white;
+            }
+
+            h5 {
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+        }
+
+
+        #googleMap {
+            -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+
+            &:hover {
+                filter: grayscale(0%)
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+/*	ASIDE  */
+.nav-menu {
+    position: fixed;
+    top: 38%;
+    left: 0;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    border-radius: 0px 8px 8px 0px;
+    min-height: 239px;
+
+    &:hover {
+        background: rgba(75, 75, 75, 1);
+    }
+
+    i {
+        margin-top: 4px;
+        text-align: center;
+    }
+
+    .icon-background {
+        color: transparent;
+    }
+
+    .fa-stack {
+        margin-bottom: 2px
+    }
+
+    .link {
+        color: white;
+
+        &:hover {
+            color: red;
+        }
+    }
+
+    .icon-hover {
+        color: red;
+    }
+}
+
+
+
+
+

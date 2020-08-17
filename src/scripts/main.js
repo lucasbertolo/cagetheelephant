@@ -1,9 +1,8 @@
-/* eslint-disable import/extensions */
-/* eslint-disable no-undef */
-import { videoPlayer, changeVideo, handleVolume } from './video.js';
-import { setHover, removeHover, handleSmoothScroll } from './scroll.js';
-import { setDisco } from './disco.js';
-import { handleConcerts, changeMarker, initMap } from './calendar.js';
+import { videoPlayer, changeVideo, handleVolume } from './video';
+import { setHover, removeHover, handleSmoothScroll } from './scroll';
+import { setDisco } from './disco';
+import { setMember } from './members';
+import { handleConcerts, changeMarker, initMap } from './calendar';
 
 // // GOOGLE MAP
 
@@ -43,6 +42,13 @@ $(document).ready(() => {
   $('#disco').hover(setHover('disco'), removeHover('disco'));
   $('#calendar').hover(setHover('calendar'), removeHover('calendar'));
   $('#contact').hover(setHover('contact'), removeHover('contact'));
+
+  // MEMBERS
+  $('#member-1r').on('click', setMember('brad'));
+  $('#member-2').on('click', setMember('daniel'));
+  $('#member-3').on('click', setMember('jared'));
+  $('#member-4').on('click', setMember('matthan'));
+  $('#member-5').on('click', setMember('matt'));
 
   // DISCO
   $('#disco-1').on('click', setDisco(0));

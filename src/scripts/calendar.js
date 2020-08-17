@@ -1,7 +1,4 @@
-/* eslint-disable no-console */
-/* eslint-disable no-undef */
-// eslint-disable-next-line import/extensions
-import { concerts } from '../assets/sources.js';
+import { concerts } from '../assets/sources';
 
 let geocoder;
 let map;
@@ -27,7 +24,8 @@ export function changeMarker() {
         map,
         position: results[0].geometry.location,
       });
-    } else { console.log(`Geocode was not successful for the following reason: ${status}`); }
+    // eslint-disable-next-line no-console
+    } else console.log(`Geocode was not successful for the following reason: ${status}`);
   });
 }
 

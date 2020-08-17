@@ -2,9 +2,12 @@
   "name": "cagetheelephant",
   "version": "1.0.0",
   "description": "",
-  "main": "scripts/main.js",
+  "main": "dist/bundle.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "npx sass src/stylesheets/main.scss src/stylesheets/index.css",
+    "build": "npx webpack && npx sass src/stylesheets/main.scss dist/index.css",
+    "dev": "npm run build && npm run sass && live-server"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +15,9 @@
     "eslint": "^7.7.0",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-html": "^6.0.2",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {}
 }

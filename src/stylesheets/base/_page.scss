@@ -1,0 +1,38 @@
+/* Basic */
+
+// MSIE: Required for IEMobile.
+@-ms-viewport {
+    width: device-width;
+}
+
+body {
+    scrollbar-width: 0;
+    scrollbar-color: transparent;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    counter-reset: section;
+}
+
+a {
+    text-decoration: none;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        text-decoration: none
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.panel {
+    min-height: 100vh;
+    width: 80vw;
+    margin: 0 auto;
+    content: "";
+}

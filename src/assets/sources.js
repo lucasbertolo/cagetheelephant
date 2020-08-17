@@ -42,15 +42,15 @@ export const members = [
   {
     bio: 'Does anyone know anything about this guy?<br><br>',
     img: 'https://imageshack.com/i/plXPgNcMj',
-    name: 'Brad Shultz',
-    instrument: 'Guitar',
+    name: 'Jared Champion',
+    instrument: 'Drum',
   },
   {
     bio: `Matthan Minster has recently moved to Portland
 Oregon with his bandmates to pursue a career in music. In 2004 he completed a
 soundtrack for a University of Texas student film entitled The Gulf`,
     img: 'https://imageshack.com/i/plXPgNcMj',
-    name: 'Brad Shultz',
+    name: 'Matthan Minster',
     instrument: 'Guitar',
   },
   {
@@ -65,8 +65,8 @@ of 2014 in a civil ceremony in the Warren County Courthouse, Bowling Green.
 They celebrated the marriage in August of the same year with family and friends in 
 Rennes, France- where Juliette is from and a later celebration in America in October'`,
     img: 'https://imageshack.com/i/plXPgNcMj',
-    name: 'Brad Shultz',
-    instrument: 'Guitar',
+    name: 'Matt Shultz',
+    instrument: 'Vocalist',
   },
 ];
 
