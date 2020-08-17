@@ -1,26 +1,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>SPES</title>	
+<title>Cage the elephant</title>	
 	<meta charset="utf-8" />
   	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="index-mobile.css">
-    <link rel="stylesheet" href="scroll/jquery.mCustomScrollbar.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>     
-    <script src="http://maps.googleapis.com/maps/api/js"></script>
-    <script src="index.js"></script> 
-    <script src="scroll/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <link rel="stylesheet" href="index-mobile.css">  
+    <!-- <script src="scroll/jquery.mCustomScrollbar.concat.min.js"></script> -->
+    <!-- <script src="scroll/jquery.mCustomScrollbar.concat.min.js"></script> -->
 
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy">
 
-<!-- MENU PARA CELULARES -->
+<!-- MENU PARA CELULARES
 <nav class="navbar navbar-inverse hidden-lg hidden-sm hidden-md" style="margin-bottom: 0px; background-color: rgba(0,0,0,0.7); font-family: 'Optimus'; position: fixed; top: 0; left: 0; width: 100%; z-index: 1;">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -33,19 +28,19 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav" style="font-size: 1.1em;">
-      	<li><a href="#sobre">Who we are</a></li>
-        <li><a href="#membros">Our Guys</a></li>
-        <li><a href="#discografia">Disco</a></li>
-        <li><a href="#calendario">Tour</a></li>
-        <li><a href="#contato">Contact</a></li>
+      	<li><a href="#about">Who we are</a></li>
+        <li><a href="#members">Our Guys</a></li>
+        <li><a href="#disco">Disco</a></li>
+        <li><a href="#calendar">Tour</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </div>
-</nav>
+</nav> -->
 
 <!-- Video background -->
 <video autoplay onended="videoPlay()" class="bg_video" id="video">
-	 <source id='mp4Source' src="videos/video1.mp4" type="video/mp4" />
+	 <source id='mp4Source' src="assets/videos/video1.mp4" type="video/mp4" />
 </video>
 
 <!-- Menu inferior -->
@@ -58,8 +53,8 @@
         <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
 	</div>
     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 music">
-    	<h3 id="nome-musica">Cigarrete Daydreams</h3>
-        <h5 id="disco-musica">Melophobia</h5>
+    	<h3 id="music-name">Cigarrete Daydreams</h3>
+        <h5 id="disco-name">Melophobia</h5>
     </div>
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6 controls text-right">
     	<span id="play"><i class="fa fa-pause" aria-hidden="true"></i></span>
@@ -78,38 +73,38 @@
   		<i class="fa fa-home fa-stack-1x link"></i>
 	</div>
     </a>
-    <a href="#sobre">
+    <a href="#about">
     <div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>About us</h4>">
   		<i class="fa fa-circle fa-stack-2x icon-background"></i>
-        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-sobre"></i>
+        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-about"></i>
   		<i class="fa fa fa-rocket fa-stack-1x link"></i>
 	</div>
     </a>
-    <a href="#membros">
+    <a href="#members">
     <div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>Members</h4>">
   		<i class="fa fa-circle fa-stack-2x icon-background"></i>
-        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-membros"></i>
+        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-members"></i>
   		<i class="fa fa fa-star fa-stack-1x link" ></i>
 	</div>
     </a>
-    <a href="#discografia">
+    <a href="#disco">
     <div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>Disco</h4>">
   		<i class="fa fa-circle fa-stack-2x icon-background"></i>
         <i class="fa fa-circle-thin fa-stack-2x link" id="icon-disco"></i>
   		<i class="fa fa-headphones fa-stack-1x link"></i>
 	</div>
     </a>
-    <a href="#calendario">
+    <a href="#calendar">
     <div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>Calendar</h4>">
   		<i class="fa fa-circle fa-stack-2x icon-background"></i>
         <i class="fa fa-circle-thin fa-stack-2x link" id="icon-calendar"></i>
   		<i class="fa fa-calendar fa-stack-1x link"></i>
 	</div>
     </a>
-    <a href="#contato">
+    <a href="#contact">
     <div class="fa-stack fa-lg col-lg-12" data-toggle="tooltip" data-placement="right" title="<h4>Contact</h4>">
   		<i class="fa fa-circle fa-stack-2x icon-background"></i>
-        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-contato"></i>
+        <i class="fa fa-circle-thin fa-stack-2x link" id="icon-contact"></i>
   		<i class="fa fa-info fa-stack-1x link" ></i>
 	</div>
 	</a>
@@ -126,7 +121,7 @@
         </div>
     </div>
     
-    <div class="col-lg-12" id="sobre">
+    <div class="col-lg-12" id="about">
     	<div class="container-fluid content-sobre">
         	<p class="numero-colunas historia"><span style="font-family: Optimus; color: rgba(255,92,15,1); font-size: 1.4em; font-weight: bold;">Cage the Elephant is an American rock band from Bowling Green, Kentucky, that formed in 2006 and moved to London, England before their first album was released in 2008.</span> <br /><br /><br /> The group currently consists of vocalist Matthew Shultz, rhythm guitarist Brad Shultz, drummer Jared Champion and bassist Daniel Tichenor, as well as touring keyboardist/guitarist Matthan Minster and touring lead guitarist Nick Bockrath. Lincoln Parish served as the band's lead guitarist from their formation in 2006 until December 2013, when he left on good terms to pursue a career in producing. The band's first album, Cage the Elephant, was released in 2008 to much success, spawning several successful radio singles and gained the band a large following in both the United States and the United Kingdom.<br /><br /><br />
 
@@ -136,7 +131,7 @@ Cage the Elephant are known for energetic live performances and for possessing a
     
     
     <!-- Membros -->
-  	<div class="col-lg-12" id="membros">
+  	<div class="col-lg-12" id="members">
     	<div class="container-fluid content-membros">
         	<div class="row" id="n1">
             
@@ -217,7 +212,7 @@ Matt married his fiancé Juliette Buchs, French actress and model, at the beginn
     </div>
     
     <!-- Disco -->
-    <div class="col-lg-12" id="discografia">
+    <div class="col-lg-12" id="disco">
     	<div class="content-discografia container-fluid">        	
         	<div class="container-discografia">
         		<div id="carousel">
@@ -242,49 +237,8 @@ Matt married his fiancé Juliette Buchs, French actress and model, at the beginn
         </div>
         <div class="modal-body">
         
-        <table id="musics">        
-		
-  		<tr>        	
-    		<td>Cry Baby</td>
-    		<td><i class="fa fa-download" aria-hidden="true"></i></td>           
-  		</tr>
-  		<tr>
-    		<td>Mess Around</td>
-    		<td><i class="fa fa-download" aria-hidden="true"></i></td>
-      	</tr>
-      	<tr>
-        	<td>Sweetie Little Jean</td>
-        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
-      	</tr>
-      	<tr>
-        	<td>Too Late To Say Goodbye</td>
-        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
-      	</tr>
-      	<tr>
-        	<td>Cold Cold Cold</td>
-        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
-      	</tr>
-      	<tr>
-        	<td>Trouble</td>
-        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
-      	</tr>
-      	<tr>
-        	<td>How Are You True</td>
-        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
-      	</tr>
-      	<tr>
-        	<td>That's Right</td>
-        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
-      	</tr>
-      	<tr>
-        	<td>Punchin' Bag</td>
-        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
-      	</tr>
-      	<tr>
-        	<td>Portuguese Knife Fight</td>
-        	<td><i class="fa fa-download" aria-hidden="true"></i></td>
-      	</tr>
-    </table>
+        <table id="musics">    	
+        </table>
 
         </div>
         <div class="modal-footer">
@@ -300,9 +254,9 @@ Matt married his fiancé Juliette Buchs, French actress and model, at the beginn
       
       <!-- Calendario -->
     
-    <div class="col-lg-12" id="calendario">
+    <div class="col-lg-12" id="calendar">
     	<div class="content-calendario container-fluid">
-        	<div id="alt-esq">
+        	<div id="decrease-concert">
             	<i class="fa fa-chevron-left" aria-hidden="true" id="seta-esq"></i>
             </div>
         	<div class="modulo-show" id="googleMap">
@@ -314,7 +268,7 @@ Matt married his fiancé Juliette Buchs, French actress and model, at the beginn
                 	<h5 id="local-show">Las Vegas, NV, US</h5>
                 </div>
             </div>
-            <div id="alt-dir">
+            <div id="increase-concert">
             	<i class="fa fa-chevron-right" aria-hidden="true" id="seta-dir"></i>
             </div>
         </div>
@@ -322,7 +276,7 @@ Matt married his fiancé Juliette Buchs, French actress and model, at the beginn
  	</div>
     
     <!-- Contato -->
-    <div class="col-lg-12" id="contato">
+    <div class="col-lg-12" id="contact">
     	<div class="content-contato container-fluid">
         
 		<div id="wrap">	
@@ -401,6 +355,11 @@ Matt married his fiancé Juliette Buchs, French actress and model, at the beginn
 </div>
 
 
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
+<!-- <link rel="stylesheet" href="scroll/jquery.mCustomScrollbar.css" /> -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script type="module" src="scripts/main.js"></script> 
 </body>
 </html>

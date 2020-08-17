@@ -2,8 +2,8 @@
 	body{ overflow: hidden;}
 	
 	/* NAV INFERIOR */
-	#nome-musica { font-size: 1em; margin-top: 18px; }
-	#disco-musica{ font-size: 0.7em;}
+	#music-name { font-size: 1em; margin-top: 18px; }
+	#disco-name{ font-size: 0.7em;}
 	.controls{ font-size: 1.3em;}
 	.controls i { margin-right: 0px; margin-left: 3px; z-index: 1;}
 	
