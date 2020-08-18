@@ -11,7 +11,7 @@
                 margin-bottom: 20px;
                 text-align: center;
                 font-size: 48px;
-                text-shadow: 0 1px 0 #ede8d9;
+                text-shadow: 0 1px 0 $shadow-fg;
             }
 
             #form_wrap {
@@ -49,7 +49,7 @@
                 }
 
                 form {
-                    background: #f7f2ec url("../assets/images/letter_bg.png");
+                    background: $secondary-fg url("../assets/images/letter_bg.png");
                     position: relative;
                     top: 200px;
                     overflow: hidden;
@@ -57,9 +57,9 @@
                     width: 400px;
                     margin: 0px auto;
                     padding: 20px;
-                    border: 1px solid #fff;
+                    border: 1px solid $fg;
                     border-radius: 3px;
-                    box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
+                    box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px $fg;
                     transition: all 1s ease-in-out 0.3s;
                 }
 
@@ -68,14 +68,14 @@
                     font-size: 16px;
                     color: #b3aba1;
                     text-transform: uppercase;
-                    text-shadow: 0px 1px 0px #fff;
+                    text-shadow: 0px 1px 0px $fg;
                 }
 
                 input[type="text"],
                 textarea,
                 input[type="email"] {
                     font: 14px normal normal uppercase helvetica, arial, serif;
-                    color: #7c7873;
+                    color: $bg-opac;
                     background: none;
                     width: 360px;
                     height: 30px;
@@ -83,9 +83,9 @@
                     max-width: 365px;
                     padding: 0px 10px;
                     margin: 0 0 10px 0;
-                    border: 1px solid #f8f5f1;
+                    border: 1px solid $secondary-fg;
                     border-radius: 5px;
-                    box-shadow: inset 0px 0px 1px #b3a895;
+                    box-shadow: inset 0px 0px 1px $shadow-fg;
                 }
 
                 input[type="email"] {
@@ -103,7 +103,7 @@
                 input[type="email"]:focus {
                     background: rgba(255, 255, 255, 0.35);
                     z-index: 1;
-                    border: 2px solid black;
+                    border: 2px solid $bg;
                     outline: none;
                 }
 

@@ -11,11 +11,11 @@ $footer-height: 80px;
     justify-content: space-between;
     height: $footer-height;
     width: 100%;
-    background-color: rgba(75, 75, 75, 0.2);
+    background-color: $bg-full-opac;
     z-index: 1;
 
     &:hover {
-        background: rgba(75, 75, 75, 1);
+        background: $bg-opac;
     }
 
     .social,
@@ -27,32 +27,34 @@ $footer-height: 80px;
         text-align: center;
 
         i {
-            color: white;
             cursor: pointer;
             padding: 10px;
+        }
+    }
+    
+    .controls {
+        color: $fg;
 
-                &:hover{
-                    color: rgba(255,255,255,0.5)
-                }
+        i:hover{
+            color: $shadow-fg;
         }
     }
 
-    .music-description{
+    .music-description {
         padding: 10px;
         flex-direction: column;
+        color: $fg;
 
-        h5{
-            &:hover{
-                color: rgba(255,255,255,0.5)
+        h5 {
+            &:hover {
+                color: $shadow-fg;
             }
         }
 
-        h6{
-            &:hover{
-                color: rgba(255,255,255,0.5)
+        h6 {
+            &:hover {
+                color: $shadow-fg;
             }
         }
     }
-
-
 }

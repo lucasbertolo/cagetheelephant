@@ -1,17 +1,20 @@
 /*	ASIDE  */
 .nav-menu {
+    display: flex;
     position: fixed;
     top: 38%;
     left: 0;
     width: 70px;
-    display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     z-index: 1;
+    background-color: $bg-full-opac;
     border-radius: 0px 8px 8px 0px;
-    min-height: 239px;
-
+    padding: 15px;
+    
     &:hover {
-        background: rgba(75, 75, 75, 1);
+        background: $bg-opac;
     }
 
     i {
@@ -28,15 +31,15 @@
     }
 
     .link {
-        color: white;
+        color: $fg;
 
         &:hover {
-            color: red;
+            color: $det;
         }
     }
 
     .icon-hover {
-        color: red;
+        color: $det;
     }
 }
 

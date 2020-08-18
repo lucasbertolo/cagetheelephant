@@ -4,7 +4,8 @@
     section {
         background: $bg-opac;
         color: $fg;
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;   
         overflow: auto;
         border-style: solid;
         border-width: 4px;
@@ -13,7 +14,7 @@
         border-right-color: $dark-det;
         border-bottom-color: $det;
         padding: 26px;
-        text-align: justify;        
+        text-align: justify;     
 
         .column-number {
             -moz-column-count: 2;
@@ -25,7 +26,9 @@
 
         .header-history{
             font-size: 1.2em;
+            font-family: $font-italic;
             font-style: italic;
+            color: $shadow-fg;
         }
     }
 }

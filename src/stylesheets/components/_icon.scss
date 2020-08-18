@@ -1,0 +1,48 @@
+/* Icon */
+.social-link {
+    border: none;
+}
+
+.social {
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+.fa-instagram {
+    color: $fg;
+    &:hover {
+        color: $instagram;
+    }
+}
+
+.fa-facebook {
+    color: $fg;
+
+    &:hover {
+        color: $facebook;
+    }
+}
+
+.fa-tumblr {
+    color: $fg;
+
+    &:hover {
+        color: $tumblr;
+    }
+}
+
+.fa-youtube {
+    color: $fg;
+
+    &:hover {
+        color: $youtube;
+    }
+}
+
+.fa-twitter {
+    color: $fg;
+
+    &:hover {
+        color: $twitter;
+    }
+}

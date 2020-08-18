@@ -30,6 +30,33 @@ a:link, a:visited, a:hover, a:active {
   content: "";
 }
 
+@font-face {
+  font-family: "OpenSans";
+  src: url("../assets/fonts/opensans-regular-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../assets/fonts/opensans-bold-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "OpenSansItalic";
+  src: url("../assets/fonts/opensans-italic-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "OpenSansLight";
+  src: url("../assets/fonts/opensans-light-webfont.woff") format("woff");
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+i {
+  font-family: "OpenSans", Arial, sans-serif;
+}
+
 /* vars */
 @keyframes typing {
   from {
@@ -58,20 +85,68 @@ a:link, a:visited, a:hover, a:active {
   animation-play-state: paused;
 }
 
+/* Icon */
+.social-link {
+  border: none;
+}
+
+.social {
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+.fa-instagram {
+  color: #fff;
+}
+.fa-instagram:hover {
+  color: #dc4a38;
+}
+
+.fa-facebook {
+  color: #fff;
+}
+.fa-facebook:hover {
+  color: #3b5998;
+}
+
+.fa-tumblr {
+  color: #fff;
+}
+.fa-tumblr:hover {
+  color: #35465c;
+}
+
+.fa-youtube {
+  color: #fff;
+}
+.fa-youtube:hover {
+  color: #c52a2a;
+}
+
+.fa-twitter {
+  color: #fff;
+}
+.fa-twitter:hover {
+  color: #00acee;
+}
+
 /*	ASIDE  */
 .nav-menu {
+  display: flex;
   position: fixed;
   top: 38%;
   left: 0;
   width: 70px;
-  display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 0px 8px 8px 0px;
-  min-height: 239px;
+  padding: 15px;
 }
 .nav-menu:hover {
-  background: #4b4b4b;
+  background: rgba(0, 0, 0, 0.7);
 }
 .nav-menu i {
   margin-top: 4px;
@@ -84,13 +159,13 @@ a:link, a:visited, a:hover, a:active {
   margin-bottom: 2px;
 }
 .nav-menu .link {
-  color: white;
+  color: #fff;
 }
 .nav-menu .link:hover {
-  color: red;
+  color: #9a031e;
 }
 .nav-menu .icon-hover {
-  color: red;
+  color: #9a031e;
 }
 
 #wrapper {
@@ -121,11 +196,11 @@ a:link, a:visited, a:hover, a:active {
   justify-content: space-between;
   height: 80px;
   width: 100%;
-  background-color: rgba(75, 75, 75, 0.2);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 .footer-menu:hover {
-  background: #4b4b4b;
+  background: rgba(0, 0, 0, 0.7);
 }
 .footer-menu .social,
 .footer-menu .controls,
@@ -138,24 +213,25 @@ a:link, a:visited, a:hover, a:active {
 .footer-menu .social i,
 .footer-menu .controls i,
 .footer-menu .music-description i {
-  color: white;
   cursor: pointer;
   padding: 10px;
 }
-.footer-menu .social i:hover,
-.footer-menu .controls i:hover,
-.footer-menu .music-description i:hover {
-  color: rgba(255, 255, 255, 0.5);
+.footer-menu .controls {
+  color: #fff;
+}
+.footer-menu .controls i:hover {
+  color: #b3a895;
 }
 .footer-menu .music-description {
   padding: 10px;
   flex-direction: column;
+  color: #fff;
 }
 .footer-menu .music-description h5:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: #b3a895;
 }
 .footer-menu .music-description h6:hover {
-  color: rgba(255, 255, 255, 0.5);
+  color: #b3a895;
 }
 
 /* Home */
@@ -166,7 +242,7 @@ a:link, a:visited, a:hover, a:active {
   font-weight: 800;
   letter-spacing: -3px;
   line-height: 1;
-  text-shadow: #ededed 3px 2px 0;
+  text-shadow: #b3a895 3px 2px 0;
   font-size: 4em;
 }
 #home .moon {
@@ -218,7 +294,8 @@ a:link, a:visited, a:hover, a:active {
 #about section {
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   overflow: auto;
   border-style: solid;
   border-width: 4px;
@@ -238,7 +315,9 @@ a:link, a:visited, a:hover, a:active {
 }
 #about section .header-history {
   font-size: 1.2em;
+  font-family: "OpenSansItalic", Arial, sans-serif;
   font-style: italic;
+  color: #b3a895;
 }
 
 /* Members */
@@ -276,7 +355,7 @@ a:link, a:visited, a:hover, a:active {
 #members section .member-row .container-member .pseudo:hover {
   transition: background-color 1s ease;
   cursor: pointer;
-  background-color: rgba(174, 173, 173, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 #members section .member-row .container-member .pseudo p {
   font-size: 1.9em;
@@ -339,7 +418,7 @@ a:link, a:visited, a:hover, a:active {
   border-radius: 70%;
   width: 260px;
   height: 300px;
-  border: 2px solid black;
+  border: 2px solid #000;
 }
 #disco section .disco-img:hover {
   -webkit-filter: grayscale(0);
@@ -387,22 +466,22 @@ a:link, a:visited, a:hover, a:active {
 }
 #calendar section #arr-dec:hover,
 #calendar section #arr-inc:hover {
-  color: rgba(191, 0, 0, 0.7);
+  color: #9a031e;
   cursor: pointer;
 }
 #calendar section .container-map {
   width: 30%;
   height: 80%;
-  border: 2px solid orange;
+  border: 2px solid rgba(0, 0, 0, 0.7);
   margin-top: 5%;
   float: left;
-  border: solid 2px rgba(191, 0, 0, 0.7);
+  border: solid 2px #7d2525;
 }
 #calendar section .descr-show {
   width: 30%;
   min-height: 40%;
   background-color: rgba(0, 0, 0, 0.7);
-  border: solid 2px rgba(191, 0, 0, 0.7);
+  border: solid 2px #7d2525;
   border-left: none;
   margin-top: 15%;
   float: left;
@@ -412,7 +491,7 @@ a:link, a:visited, a:hover, a:active {
 #calendar section .info-show h4,
 #calendar section .info-show h5 {
   margin: 10px;
-  color: red;
+  color: #9a031e;
 }
 #calendar section .info-show h3 {
   font-size: 5em;
@@ -420,7 +499,7 @@ a:link, a:visited, a:hover, a:active {
 }
 #calendar section .info-show h4 {
   font-size: 2em;
-  color: white;
+  color: #fff;
 }
 #calendar section .info-show h5 {
   font-size: 1.3em;
@@ -444,7 +523,7 @@ a:link, a:visited, a:hover, a:active {
   margin-bottom: 20px;
   text-align: center;
   font-size: 48px;
-  text-shadow: 0 1px 0 #ede8d9;
+  text-shadow: 0 1px 0 #b3a895;
 }
 #contact section #wrap #form_wrap {
   overflow: hidden;
@@ -475,7 +554,7 @@ a:link, a:visited, a:hover, a:active {
   display: none;
 }
 #contact section #wrap #form_wrap form {
-  background: #f7f2ec url("../assets/images/letter_bg.png");
+  background: #f8f5f1 url("../assets/images/letter_bg.png");
   position: relative;
   top: 200px;
   overflow: hidden;
@@ -499,7 +578,7 @@ a:link, a:visited, a:hover, a:active {
 #contact section #wrap #form_wrap textarea,
 #contact section #wrap #form_wrap input[type=email] {
   font: 14px normal normal uppercase helvetica, arial, serif;
-  color: #7c7873;
+  color: rgba(0, 0, 0, 0.7);
   background: none;
   width: 360px;
   height: 30px;
@@ -524,7 +603,7 @@ a:link, a:visited, a:hover, a:active {
 #contact section #wrap #form_wrap input[type=email]:focus {
   background: rgba(255, 255, 255, 0.35);
   z-index: 1;
-  border: 2px solid black;
+  border: 2px solid #000;
   outline: none;
 }
 #contact section #wrap #form_wrap input[type=submit] {

@@ -19,14 +19,14 @@
             .container-member {
                 .pseudo {
                     display: block;
-                    background: rgba(0, 0, 0, 0.7);
+                    background: $bg-opac;
                     color: #fff;
                     margin: 10px;
                     padding: 100px;
                     position: relative;
 
                     &:before {
-                        border: 5px solid #000;
+                        border: 5px solid $bg;
                         content: "";
                         position: absolute;
                         top: -10px;
@@ -38,7 +38,7 @@
                     &:hover {
                         transition: background-color 1s ease;
                         cursor: pointer;
-                        background-color: rgba(174, 173, 173, 0.4);
+                        background-color: $bg-full-opac;
                     }
 
                     p {
