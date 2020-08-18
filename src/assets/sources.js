@@ -134,7 +134,7 @@ export const disco = [
     </tr>'
     `,
 
-    link: 'http://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009',
+    link: 'https://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009',
   },
   {
     title: 'Cage The Elephant',
@@ -184,7 +184,7 @@ export const disco = [
     </tr>'
     `,
 
-    link: 'http://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009',
+    link: 'https://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009',
   },
   {
     title: 'Melophobia',
@@ -231,7 +231,7 @@ export const disco = [
     </tr>
     `,
 
-    link: 'http://www.fnac.pt/Cage-The-Elephant-Melophobia-CD-Album/a776349',
+    link: 'https://www.fnac.pt/Cage-The-Elephant-Melophobia-CD-Album/a776349',
   },
   {
     title: 'Thank You Happy Birthday',
@@ -284,7 +284,7 @@ export const disco = [
     </tr>'
     `,
 
-    link: 'http://www.fnac.pt/Cage-The-Elephant-Thank-You-Happy-Birthday-lp-imp-Vinil/a358348',
+    link: 'https://www.fnac.pt/Cage-The-Elephant-Thank-You-Happy-Birthday-lp-imp-Vinil/a358348',
   },
 ];
 
