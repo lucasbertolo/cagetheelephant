@@ -15,6 +15,7 @@ $(document).ready(() => {
   // VIDEO
   const playVideo = changeVideo();
 
+  $('#video').on('ended', playVideo);
   $('#forward').on('click', playVideo);
   $('#back').on('click', () => playVideo(false));
   $('#play').on('click', videoPlayer);

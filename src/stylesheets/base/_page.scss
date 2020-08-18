@@ -5,7 +5,8 @@
     width: device-width;
 }
 
-body {
+body,
+html {
     scrollbar-width: 0;
     scrollbar-color: transparent;
     height: 100%;
@@ -35,4 +36,9 @@ a {
     width: 80vw;
     margin: 0 auto;
     content: "";
+
+    @media (max-width: $breakpoint-tablet) {
+        max-width: 80vw;
+        max-height: 100vh;
+    }
 }
