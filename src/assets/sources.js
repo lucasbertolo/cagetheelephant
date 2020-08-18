@@ -14,7 +14,7 @@ export const members = [
     Cheese and The Everly Brothers, Bowling Green was a little oasis.`,
     img: 'https://imageshack.com/i/plXPgNcMj',
     name: 'Brad Shultz',
-    instrument: 'Guitar',
+    instrument: 'Guitarist',
   },
 
   {
@@ -34,24 +34,24 @@ export const members = [
     him to learn bass and join their band. Seven years later, Tichenor is supplying
     pocket lines on songs such as “Take It or Leave It” and “Halo” with the poise 
     of a seasoned veteran and the gratitude of a man given a second chance.`,
-    img: 'https://imageshack.com/i/plXPgNcMj',
+    img: 'https://imageshack.com/i/poCbtWFcj',
     name: 'Daniel Tichenor',
-    instrument: 'Guitar',
+    instrument: 'Guitarist',
   },
 
   {
     bio: 'Does anyone know anything about this guy?<br><br>',
-    img: 'https://imageshack.com/i/plXPgNcMj',
+    img: 'https://imageshack.com/i/pnUy6H5yj',
     name: 'Jared Champion',
-    instrument: 'Drum',
+    instrument: 'Drummer',
   },
   {
     bio: `Matthan Minster has recently moved to Portland
 Oregon with his bandmates to pursue a career in music. In 2004 he completed a
 soundtrack for a University of Texas student film entitled The Gulf`,
-    img: 'https://imageshack.com/i/plXPgNcMj',
+    img: 'https://imageshack.com/i/pnyGMbHwj',
     name: 'Matthan Minster',
-    instrument: 'Guitar',
+    instrument: 'Backing Vocal',
   },
   {
     bio: `'Matt grew up2 in Bowling Green, Kentucky, with his brother, Brad, who is 
@@ -64,9 +64,9 @@ Matt married his fiancé Juliette Buchs, French actress and model, at the beginn
 of 2014 in a civil ceremony in the Warren County Courthouse, Bowling Green. 
 They celebrated the marriage in August of the same year with family and friends in 
 Rennes, France- where Juliette is from and a later celebration in America in October'`,
-    img: 'https://imageshack.com/i/plXPgNcMj',
+    img: 'https://imageshack.com/i/pmE4vYu2j',
     name: 'Matt Shultz',
-    instrument: 'Vocalist',
+    instrument: 'Lead Vocalist',
   },
 ];
 

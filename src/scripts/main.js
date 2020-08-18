@@ -4,17 +4,6 @@ import { setDisco } from './disco';
 import { setMember } from './members';
 import { handleConcerts, changeMarker, initMap } from './calendar';
 
-// // GOOGLE MAP
-
-// SCROLL CONTENT ABOUT
-// (function ($) {
-//   $(window).on('load', () => {
-//     $('.content-sobre').mCustomScrollbar({
-//       theme: 'dark',
-//     });
-//   });
-// }(jQuery));
-
 $(window).on('load', () => {
   initMap();
   window.addEventListener('load', changeMarker);
@@ -22,10 +11,6 @@ $(window).on('load', () => {
 
 $(document).ready(() => {
   $('a').on('click', handleSmoothScroll);
-  // $('[data-toggle="tooltip"]').tooltip({
-  //   html: true,
-  //   delay: { show: 500, hide: 100 },
-  // });
 
   // VIDEO
   const playVideo = changeVideo();
@@ -44,7 +29,7 @@ $(document).ready(() => {
   $('#contact').hover(setHover('contact'), removeHover('contact'));
 
   // MEMBERS
-  $('#member-1r').on('click', setMember('brad'));
+  $('#member-1').on('click', setMember('brad'));
   $('#member-2').on('click', setMember('daniel'));
   $('#member-3').on('click', setMember('jared'));
   $('#member-4').on('click', setMember('matthan'));

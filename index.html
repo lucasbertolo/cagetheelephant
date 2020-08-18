@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="src/stylesheets/index.css">
-    <!-- <link rel="stylesheet" href="src/css/index-mobile.css"> -->
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy">
     <!-- Video background -->
-    <video autoplay onended="videoPlay()" class="bg_video" id="video">
+    <video muted autoplay onended="videoPlay()" class="bg_video" id="video">
         <source id='mp4Source' src="src/assets/videos/video1.mp4" type="video/mp4" />
     </video>
 
@@ -34,48 +33,48 @@
             <span id="play"><i class="fa fa-pause" aria-hidden="true"></i></span>
             <span id="back"><i class="fa fa-backward" aria-hidden="true"></i></span>
             <span id="forward"><i class="fa fa-forward" aria-hidden="true"></i></span>
-            <span id="volume"><i class="fa fa-volume-up" aria-hidden="true"></i></span>
+            <span id="volume"><i class="fa fa-volume-off" aria-hidden="true"></i></span>
         </section>
     </footer>
 
     <nav class="nav-menu" id="myScrollspy">
         <a href="#home">
-            <div class="fa-stack" data-toggle="tooltip" data-placement="right" title="<h4>Home</h4>"> 
+            <div class="fa-stack" data-toggle="tooltip" data-placement="up" title="Home"> 
                 <i class="fa fa-circle fa-stack-2x icon-background"></i>
                 <i class="fa fa-circle-thin fa-stack-2x link" id="icon-home"></i>
                 <i class="fa fa-home fa-stack-1x link"></i>
             </div>
         </a>
         <a href="#about">
-            <div class="fa-stack" data-toggle="tooltip" data-placement="right" title="<h4>About us</h4>">
+            <div class="fa-stack" data-toggle="tooltip" data-placement="up" title="About us">
                 <i class="fa fa-circle fa-stack-2x icon-background"></i>
                 <i class="fa fa-circle-thin fa-stack-2x link" id="icon-about"></i>
                 <i class="fa fa fa-rocket fa-stack-1x link"></i>
             </div>
         </a>
         <a href="#members">
-            <div class="fa-stack" data-toggle="tooltip" data-placement="right" title="<h4>Members</h4>">
+            <div class="fa-stack" data-toggle="tooltip" data-placement="up" title="Members">
                 <i class="fa fa-circle fa-stack-2x icon-background"></i>
                 <i class="fa fa-circle-thin fa-stack-2x link" id="icon-members"></i>
                 <i class="fa fa fa-star fa-stack-1x link" ></i>
             </div>
         </a>
         <a href="#disco">
-            <div class="fa-stack" data-toggle="tooltip" data-placement="right" title="<h4>Disco</h4>">
+            <div class="fa-stack" data-toggle="tooltip" data-placement="up" title="Disco">
                 <i class="fa fa-circle fa-stack-2x icon-background"></i>
                 <i class="fa fa-circle-thin fa-stack-2x link" id="icon-disco"></i>
                 <i class="fa fa-headphones fa-stack-1x link"></i>
             </div>
         </a>
         <a href="#calendar">
-            <div class="fa-stack" data-toggle="tooltip" data-placement="right" title="<h4>Calendar</h4>">
+            <div class="fa-stack" data-toggle="tooltip" data-placement="up" title="Calendar">
                 <i class="fa fa-circle fa-stack-2x icon-background"></i>
                 <i class="fa fa-circle-thin fa-stack-2x link" id="icon-calendar"></i>
                 <i class="fa fa-calendar fa-stack-1x link"></i>
             </div>
         </a>
         <a href="#contact">
-            <div class="fa-stack" data-toggle="tooltip" data-placement="right" title="<h4>Contact</h4>">
+            <div class="fa-stack" data-toggle="tooltip" data-placement="up" title="Contact">
                 <i class="fa fa-circle fa-stack-2x icon-background"></i>
                 <i class="fa fa-circle-thin fa-stack-2x link" id="icon-contact"></i>
                 <i class="fa fa-info fa-stack-1x link" ></i>
@@ -179,18 +178,17 @@
             <section class="modal-dialog">
                 <div class="modal-content">
                     <header class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                         <h3 class="modal-title" id="nameMember"></h3>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </header>
                     <main class="modal-body">
                         <img src="https://imageshack.com/i/po27RyXMj" name="aboutme" id="img-member"/>
-                        <h3 class="media-heading" id="job">Vocal</h3>
-                        <p> Biography: </p>
+                        <b><p>Role:</p></b>
+                        <p id="job"></p>
+                        <b><p> Biography: </p></b>
                         <span id="bio"></span>
                     </main>
-                    <footer class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
-                    </footer>
+             
                 </div>
             </section>
         </article>
@@ -226,27 +224,27 @@
         </div>
 
         <!-- modal Disco -->
-        <div class="modal fade" id="modalDisco" role="dialog">
+        <article class="modal fade" id="modalDisco" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <header class="modal-header">
+                        <h3 class="modal-title" id="title-disco"></h3>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h3 class="modal-title" style="text-align: center" id="title-disco"></h3>
-                    </div>
-                    <div class="modal-body">
+                    </header>
+                    <main class="modal-body">
                         <table id="musics">
                         </table>
-                    </div>
-                    <div class="modal-footer">
+                    </main>
+                    <footer class="modal-footer">
                         <a href="http://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009" id="link-album" target="_blank"> 
                             <button type="button" class="btn btn-default">
                                 Buy Album
                             </button>
                         </a>
-                    </div>
+                    </footer>
                 </div>
             </div>
-        </div>
+        </article>
 
         <!-- Calendar -->
 
@@ -297,12 +295,9 @@
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <!-- <link rel="stylesheet" href="scroll/jquery.mCustomScrollbar.css" /> -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         <script src="http://maps.googleapis.com/maps/api/js"></script>
         <script src="dist/bundle.js"></script>
-        <!-- <script src="scroll/jquery.mCustomScrollbar.concat.min.js"></script> -->
-        <!-- <script src="scroll/jquery.mCustomScrollbar.concat.min.js"></script> -->
 </body>
 
 </html>

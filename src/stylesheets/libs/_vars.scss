@@ -4,6 +4,7 @@
 // palette
 
 $det: rgba(154, 3, 30, 1);
+$det-opac: rgba(154, 3, 30, 0.6);
 $dark-det: #7d2525;
 $bg: #000;
 $bg-opac: rgba(0, 0, 0, 0.7);
@@ -19,3 +20,7 @@ $facebook: #3b5998;
 $youtube:  #c52a2a;
 $tumblr: #35465c;
 $twitter: #00acee;
+
+// breakpoints
+
+$breakpoint-tablet: 768px;

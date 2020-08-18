@@ -1,16 +1,18 @@
+// LIBS
+
+@import './libs/vars';
+
 // BASE
 
 @import './base/page';
 @import './base/typography';
 
-// LIBS
-
-@import './libs/vars';
 
 // COMPONENTS
 
 @import './components/animate';
 @import './components/icon';
+@import './components/tooltip';
 
 // LAYOUT
 

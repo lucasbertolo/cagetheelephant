@@ -1,16 +1,15 @@
 /* Members */
 #members {
-
     section {
         display: flex;
         flex-direction: column;
 
         .member-row {
-            width: 100%;
+            width: 80%;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            margin: 10px;
+            margin: 10px auto;
 
             &:nth-child(2) {
                 justify-content: center;
@@ -20,9 +19,9 @@
                 .pseudo {
                     display: block;
                     background: $bg-opac;
-                    color: #fff;
+                    color: $fg;
                     margin: 10px;
-                    padding: 100px;
+                    padding: 65px;
                     position: relative;
 
                     &:before {
@@ -42,7 +41,7 @@
                     }
 
                     p {
-                        font-size: 1.9em;
+                        font-size: 1.3em;
                         text-align: center;
                         font-weight: bold;
                         margin-top: 14px;
@@ -54,10 +53,28 @@
                 }
             }
         }
+    }
+}
 
-        #img-member {
-            border-radius: 100px;
-        }
+#biography {
+    .modal-content {
+        background-color: $bg-opac;
     }
 
+    .modal-header {
+        color: $fg;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .modal-body {
+        color: $fg;
+        background-color: $bg-opac;
+    
+    }
+
+    #img-member {
+        max-height: 200px;
+        padding: 20px;
+    }
 }
