@@ -1,18 +1,5 @@
-@font-face {
-    font-family: "OpenSans";
-    src: url("../src/assets/fonts/opensans-regular-webfont.woff") format("woff");
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-
-@font-face {
-    font-family: "OpenSansItalic";
-    src: url("../src/assets/fonts/opensans-italic-webfont.woff") format("woff");
-}
-
-
-$font-italic: 'OpenSansItalic',
-Arial,
-sans-serif;
 $font-serif: 'OpenSans',
 Arial,
 sans-serif;

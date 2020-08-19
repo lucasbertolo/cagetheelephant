@@ -1,4 +1,6 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);/* LIBS */
 /* vars */
+/* BASE */
 /* Basic */
 @-ms-viewport {
   width: device-width;
@@ -32,14 +34,6 @@ a:link, a:visited, a:hover, a:active {
   content: "";
 }
 
-@font-face {
-  font-family: "OpenSans";
-  src: url("../src/assets/fonts/opensans-regular-webfont.woff") format("woff");
-}
-@font-face {
-  font-family: "OpenSansItalic";
-  src: url("../src/assets/fonts/opensans-italic-webfont.woff") format("woff");
-}
 h1,
 h2,
 h3,
@@ -51,12 +45,29 @@ i {
   font-family: "OpenSans", Arial, sans-serif;
 }
 
+/* COMPONENTS */
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 @keyframes typing {
   from {
     width: 0;
   }
   to {
     width: 100%;
+  }
+}
+@-webkit-keyframes rotation {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
   }
 }
 @keyframes rotation {
@@ -68,14 +79,17 @@ i {
   }
 }
 .typewritter {
-  animation: typing 3.5s steps(40, end);
+  -webkit-animation: typing 3.5s steps(40, end);
+          animation: typing 3.5s steps(40, end);
 }
 
 .rotation {
-  animation: rotation 20s infinite linear;
+  -webkit-animation: rotation 20s infinite linear;
+          animation: rotation 20s infinite linear;
 }
 .rotation:hover {
-  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 /* Icon */
@@ -137,7 +151,10 @@ i {
   font-size: 0.9em;
   /* opinion 3 */
   line-height: 1;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   pointer-events: none;
   position: absolute;
   display: none;
@@ -257,10 +274,22 @@ i {
 }
 
 /* KEYFRAMES */
+@-webkit-keyframes tooltips-vert {
+  to {
+    opacity: 0.9;
+    transform: translate(-50%, 0);
+  }
+}
 @keyframes tooltips-vert {
   to {
     opacity: 0.9;
     transform: translate(-50%, 0);
+  }
+}
+@-webkit-keyframes tooltips-horz {
+  to {
+    opacity: 0.9;
+    transform: translate(0, -50%);
   }
 }
 @keyframes tooltips-horz {
@@ -276,16 +305,19 @@ i {
 [tooltip][flow^=up]:hover::after,
 [tooltip][flow^=down]:hover::before,
 [tooltip][flow^=down]:hover::after {
-  animation: tooltips-vert 300ms ease-out forwards;
+  -webkit-animation: tooltips-vert 300ms ease-out forwards;
+          animation: tooltips-vert 300ms ease-out forwards;
 }
 
 [tooltip][flow^=left]:hover::before,
 [tooltip][flow^=left]:hover::after,
 [tooltip][flow^=right]:hover::before,
 [tooltip][flow^=right]:hover::after {
-  animation: tooltips-horz 300ms ease-out forwards;
+  -webkit-animation: tooltips-horz 300ms ease-out forwards;
+          animation: tooltips-horz 300ms ease-out forwards;
 }
 
+/* LAYOUT */
 /*	ASIDE  */
 .nav-menu {
   display: flex;
@@ -489,11 +521,11 @@ i {
   -webkit-column-count: 2;
   -webkit-column-gap: 55px;
   column-count: 2;
-  column-gap: 55px;
+  -moz-column-gap: 55px;
+       column-gap: 55px;
 }
 #about section .header-history {
   font-size: 1.2em;
-  font-family: "OpenSansItalic", Arial, sans-serif;
   font-style: italic;
   color: #b3a895;
 }
@@ -710,7 +742,8 @@ i {
   filter: grayscale(100%);
 }
 #calendar section #googleMap:hover {
-  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 /* Contact */
@@ -903,7 +936,6 @@ i {
     padding: 20px;
     width: 200px;
     text-align: center;
-    -webkit-transition-duration: 0.4s;
     /* Safari */
     transition-duration: 0.4s;
     text-decoration: none;
@@ -933,5 +965,3 @@ i {
     transition: 0s;
   }
 }
-
-/*# sourceMappingURL=index.css.map */

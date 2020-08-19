@@ -1,20 +1,20 @@
-// LIBS
+/* LIBS */
 
 @import './libs/vars';
 
-// BASE
+/* BASE */
 
 @import './base/page';
 @import './base/typography';
 
 
-// COMPONENTS
+/* COMPONENTS */
 
 @import './components/animate';
 @import './components/icon';
 @import './components/tooltip';
-
-// LAYOUT
+ 
+/* LAYOUT */
 
 @import './layout/nav';
 @import './layout/wrapper';
