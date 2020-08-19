@@ -1,13 +1,17 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="https://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en">
 
 <head>
     <title>Cage the elephant</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Website tribute to the band Cage the Elephant.">
+    <link rel="preload" href="src/assets/fonts/opensans-regular-webfont.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="src/assets/fonts/opensans-italic-webfont.woff" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="src/stylesheets/bootstrap.min.css">
-    <link rel="stylesheet" href="src/stylesheets/index.css">
+    <link rel="preload" href="src/stylesheets/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="src/stylesheets/bootstrap.min.css"></noscript>
+    <link rel="stylesheet" href="dist/index.css">
 </head>
 
 <body data-spy="scroll" data-target="#myScrollspy">
@@ -19,11 +23,11 @@
     <!-- Menu inferior -->
     <footer class="footer-menu">
         <section class="social">
-            <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-tumblr" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            <a target="_blank" href="https://www.facebook.com/cagetheelephant/" rel="noreferrer"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a target="_blank" href="https://www.instagram.com/cagetheelephant/?hl=en" rel="noreferrer"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a target="_blank" href="https://cage-the-elephant.tumblr.com/" rel="noreferrer"><i class="fa fa-tumblr" aria-hidden="true"></i></a>
+            <a target="_blank" href="https://twitter.com/cagetheelephant?lang=en" rel="noreferrer"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a target="_blank" href="https://www.youtube.com/user/cagetheelephant" rel="noreferrer"><i class="fa fa-youtube" aria-hidden="true"></i></a>
         </section>
         <section class="music-description">
             <h5 id="music-name">Cigarrete Daydreams</h5>
@@ -182,7 +186,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </header>
                     <main class="modal-body">
-                        <img src="https://imagizer.imageshack.com/img924/1325/27RyXM.jpg" name="aboutme" id="img-member"/>
+                        <img src="https://imagizer.imageshack.com/img924/1325/27RyXM.jpg" name="aboutme" id="img-member" alt="member-cage"/>
                         <b><p>Role:</p></b>
                         <p id="job"></p>
                         <b><p> Biography: </p></b>
@@ -236,7 +240,7 @@
                         </table>
                     </main>
                     <footer class="modal-footer">
-                        <a href="https://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009" id="link-album" target="_blank"> 
+                        <a href="https://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009" id="link-album" target="_blank" rel="noreferrer"> 
                             <button type="button" class="btn btn-default">
                                 Buy Album
                             </button>
@@ -276,16 +280,17 @@
                     <div id='form_wrap'>
                         <form>
                             <p>Dear Cage,</p>
-                            <label for="email">Your Message: </label>
-                            <textarea name="message" value="Your Message" id="message"></textarea>
+                            <label for="email">Your Message:
+                                <textarea name="message" value="Your Message" id="message"></textarea>
+                            </label>
                             <p>Best,</p>
 
-                            <label for="name">Name: </label>
-                            <input type="text" name="name" value="" id="name" required />
-
-                            <label for="email">Email: </label>
-                            <input type="email" name="email" value="" id="email" class="col-lg-12" required />
-
+                            <label for="name">Name: 
+                                <input type="text" name="name" value="" id="name" required />
+                            </label>
+                            <label for="email">Email:
+                                <input type="email" name="email" value="" id="email" class="col-lg-12" required />
+                            </label>
                             <input type="submit" name="submit" value="Send, we'll contact you soon!" />
                         </form>
                     </div>

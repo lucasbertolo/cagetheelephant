@@ -40,19 +40,11 @@ a:link, a:visited, a:hover, a:active {
 
 @font-face {
   font-family: "OpenSans";
-  src: url("../assets/fonts/opensans-regular-webfont.woff") format("woff");
-}
-@font-face {
-  font-family: "OpenSansBold";
-  src: url("../assets/fonts/opensans-bold-webfont.woff") format("woff");
+  src: url("../src/assets/fonts/opensans-regular-webfont.woff") format("woff");
 }
 @font-face {
   font-family: "OpenSansItalic";
-  src: url("../assets/fonts/opensans-italic-webfont.woff") format("woff");
-}
-@font-face {
-  font-family: "OpenSansLight";
-  src: url("../assets/fonts/opensans-light-webfont.woff") format("woff");
+  src: url("../src/assets/fonts/opensans-italic-webfont.woff") format("woff");
 }
 h1,
 h2,
@@ -354,6 +346,7 @@ i {
   height: auto;
   z-index: -1000;
   background-size: cover;
+  background-color: #000;
 }
 @media (max-width: 768px) {
   .bg_video {
@@ -738,7 +731,7 @@ i {
   position: absolute;
   bottom: 128px;
   left: 0px;
-  background: url("../assets/images/before.png");
+  background: url("../src/assets/images/before.png");
   width: 530px;
   height: 316px;
 }
@@ -747,7 +740,7 @@ i {
   position: absolute;
   bottom: 0px;
   left: 0;
-  background: url("../assets/images/after.png");
+  background: url("../src/assets/images/after.png");
   width: 530px;
   height: 260px;
 }
@@ -755,7 +748,7 @@ i {
   display: none;
 }
 #contact section #wrap #form_wrap form {
-  background: #f8f5f1 url("../assets/images/letter_bg.png");
+  background: #f8f5f1 url("../src/assets/images/letter_bg.png");
   position: relative;
   top: 200px;
   overflow: hidden;
@@ -802,7 +795,7 @@ i {
 #contact section #wrap #form_wrap textarea:focus,
 #contact section #wrap #form_wrap input[type=text]:focus,
 #contact section #wrap #form_wrap input[type=email]:focus {
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.3);
   z-index: 1;
   border: 2px solid #000;
   outline: none;
@@ -810,7 +803,7 @@ i {
 #contact section #wrap #form_wrap input[type=submit] {
   position: relative;
   font-size: 24px;
-  color: #7c7873;
+  color: #b3a895;
   text-shadow: 0 1px 0 #fff;
   width: 100%;
   text-align: center;

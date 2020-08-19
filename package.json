@@ -5,8 +5,8 @@
   "main": "dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "npx sass src/stylesheets/main.scss src/stylesheets/index.css",
-    "build": "npx webpack && npx sass src/stylesheets/main.scss dist/index.css",
+    "sass": "npx sass src/stylesheets/main.scss dist/index.css",
+    "build": "npx webpack && npm run sass",
     "dev": "npm run build && npm run sass && live-server"
   },
   "author": "",

@@ -16,6 +16,7 @@
     height: auto;
     z-index: -1000;
     background-size: cover; 
+    background-color: $bg;
 
     @media (max-width: $breakpoint-tablet) {
         width: 100vw;
