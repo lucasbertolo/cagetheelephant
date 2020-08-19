@@ -4,6 +4,10 @@
     height: 100%;
     width: 100%;
     position: absolute;
+
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+    }
 }
 
 .bg_video {
@@ -15,13 +19,11 @@
     width: auto;
     height: auto;
     z-index: -1000;
-    background-size: cover; 
+    background-size: cover;
     background-color: $bg;
 
+
     @media (max-width: $breakpoint-tablet) {
-        width: 100vw;
-        height: 100vh;
-        max-width: 100vw;
-        max-height: 100vh;
+        display: none;
     }
 }

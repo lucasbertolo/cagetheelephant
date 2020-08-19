@@ -31,12 +31,6 @@ a:link, a:visited, a:hover, a:active {
   margin: 0 auto;
   content: "";
 }
-@media (max-width: 768px) {
-  .panel {
-    max-width: 80vw;
-    max-height: 100vh;
-  }
-}
 
 @font-face {
   font-family: "OpenSans";
@@ -329,11 +323,21 @@ i {
 .nav-menu .icon-hover {
   color: #9a031e;
 }
+@media (max-width: 648px) {
+  .nav-menu {
+    display: none;
+  }
+}
 
 #wrapper {
   height: 100%;
   width: 100%;
   position: absolute;
+}
+@media (max-width: 648px) {
+  #wrapper {
+    display: none;
+  }
 }
 
 .bg_video {
@@ -348,12 +352,9 @@ i {
   background-size: cover;
   background-color: #000;
 }
-@media (max-width: 768px) {
+@media (max-width: 648px) {
   .bg_video {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100vw;
-    max-height: 100vh;
+    display: none;
   }
 }
 
@@ -404,6 +405,11 @@ i {
 }
 .footer-menu .music-description h6:hover {
   color: #b3a895;
+}
+@media (max-width: 648px) {
+  .footer-menu {
+    display: none;
+  }
 }
 
 /* Home */
@@ -830,6 +836,102 @@ i {
 }
 #contact section #wrap #form_wrap:hover input:hover[type=submit] {
   color: #435c70;
+}
+
+/* Error */
+.page_404 {
+  padding: 0;
+  width: 100vw;
+  height: 90vh;
+  visibility: hidden;
+}
+.page_404 img {
+  width: 100%;
+}
+.page_404 .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.page_404 .four_zero_four_bg {
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  width: 60vw;
+  background-position: center;
+}
+.page_404 .four_zero_four_bg h1 {
+  font-size: 80px;
+}
+.page_404 .four_zero_four_bg h3 {
+  font-size: 80px;
+}
+.page_404 .four_zero_four_bg .text-center {
+  text-align: center;
+  color: #000;
+}
+.page_404 .main-message {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.page_404 .main-message span {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.page_404 .link_404 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  color: #fff !important;
+  padding: 20px;
+  border: none;
+}
+.page_404 .contant_box_404 {
+  margin-top: -50px;
+}
+@media (max-width: 648px) {
+  .page_404 {
+    visibility: visible;
+  }
+  .page_404 .button {
+    position: relative;
+    background-color: #f39c12;
+    border: none;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  .page_404 .button:hover {
+    background: #fff;
+    box-shadow: 0px 2px 10px 5px #97B1BF;
+    color: #000;
+  }
+  .page_404 .button:after {
+    content: "";
+    background: #f1c40f;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s;
+  }
+  .page_404 .button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

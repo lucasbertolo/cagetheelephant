@@ -41,6 +41,10 @@
     .icon-hover {
         color: $det;
     }
+
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+     }
 }
 
 

@@ -58,4 +58,8 @@ $footer-height: 80px;
             }
         }
     }
+
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+     }
 }

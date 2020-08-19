@@ -36,9 +36,4 @@ a {
     width: 80vw;
     margin: 0 auto;
     content: "";
-
-    @media (max-width: $breakpoint-tablet) {
-        max-width: 80vw;
-        max-height: 100vh;
-    }
 }
