@@ -13,6 +13,7 @@ html {
   width: 100%;
   margin: 0;
   counter-reset: section;
+  overflow-x: hidden;
 }
 
 a {
@@ -29,9 +30,15 @@ a:link, a:visited, a:hover, a:active {
 
 .panel {
   min-height: 100vh;
-  width: 80vw;
-  margin: 0 auto;
+  max-width: 80vw;
+  margin: 50px auto;
+  padding: 10px;
   content: "";
+}
+@media (max-width: 1240px) {
+  .panel {
+    min-height: 50vh;
+  }
 }
 
 h1,
@@ -453,7 +460,13 @@ i {
   letter-spacing: -3px;
   line-height: 1;
   text-shadow: #b3a895 3px 2px 0;
-  font-size: 4em;
+  font-size: 3.6em;
+  padding-top: 15px;
+}
+@media (max-width: 1240px) {
+  #home #logo {
+    font-size: 2.3em;
+  }
 }
 #home .moon {
   width: 100px;
@@ -462,6 +475,11 @@ i {
   box-shadow: 15px 15px 0 0 #fff;
   margin: 0 auto;
   margin-top: 10%;
+}
+@media (max-width: 1240px) {
+  #home .moon {
+    margin-top: 200px;
+  }
 }
 #home .title {
   background-color: transparent;
@@ -491,7 +509,7 @@ i {
   content: "";
   position: absolute;
   left: 41%;
-  bottom: 95%;
+  top: 0;
   height: 1px;
   width: 20%;
   /* or 100px */
@@ -516,6 +534,11 @@ i {
   padding: 26px;
   text-align: justify;
 }
+@media (max-width: 1240px) {
+  #about section {
+    width: 100%;
+  }
+}
 #about section .column-number {
   -moz-column-count: 2;
   -webkit-column-count: 2;
@@ -532,20 +555,35 @@ i {
 
 /* Members */
 #members section {
-  display: flex;
-  flex-direction: column;
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  grid-gap: 0.5rem;
+  grid-template-areas: "first . second" ".    third    ." "fourth . fifth";
+  padding: 20px;
 }
-#members section .member-row {
-  width: 80%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 10px auto;
+@media (max-width: 1240px) {
+  #members section {
+    grid-template-areas: "first" "second" "third" "fourth" "fifth";
+  }
 }
-#members section .member-row:nth-child(2) {
-  justify-content: center;
+#members section #member-1 {
+  grid-area: first;
 }
-#members section .member-row .container-member .pseudo {
+#members section #member-2 {
+  grid-area: second;
+}
+#members section #member-3 {
+  grid-area: third;
+}
+#members section #member-4 {
+  grid-area: fourth;
+}
+#members section #member-5 {
+  grid-area: fifth;
+}
+#members section .container-member .pseudo {
   display: block;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
@@ -553,7 +591,7 @@ i {
   padding: 65px;
   position: relative;
 }
-#members section .member-row .container-member .pseudo:before {
+#members section .container-member .pseudo:before {
   border: 5px solid #000;
   content: "";
   position: absolute;
@@ -562,12 +600,12 @@ i {
   left: -10px;
   right: -10px;
 }
-#members section .member-row .container-member .pseudo:hover {
+#members section .container-member .pseudo:hover {
   transition: background-color 1s ease;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
 }
-#members section .member-row .container-member .pseudo p {
+#members section .container-member .pseudo p {
   font-size: 1.3em;
   text-align: center;
   font-weight: bold;
@@ -680,21 +718,22 @@ i {
 }
 
 /* Calendar */
-#calendar {
-  height: 100vh;
-}
 #calendar section {
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1240px) {
+  #calendar section {
+    width: 100%;
+  }
 }
 #calendar section #decrease-concert,
 #calendar section #increase-concert {
-  width: 15%;
   height: 80%;
-  float: left;
   font-size: 6em;
   text-align: center;
   color: rgba(0, 0, 0, 0.7);
-  margin-top: 23%;
 }
 #calendar section #arr-dec:hover,
 #calendar section #arr-inc:hover {
@@ -702,21 +741,17 @@ i {
   cursor: pointer;
 }
 #calendar section .container-map {
-  width: 30%;
-  height: 80%;
+  width: 360px;
+  height: 500px;
   border: 2px solid rgba(0, 0, 0, 0.7);
-  margin-top: 5%;
-  float: left;
   border: solid 2px #7d2525;
 }
 #calendar section .descr-show {
   width: 30%;
-  min-height: 40%;
   background-color: rgba(0, 0, 0, 0.7);
   border: solid 2px #7d2525;
   border-left: none;
-  margin-top: 15%;
-  float: left;
+  padding: 10px;
   text-align: right;
 }
 #calendar section .info-show h3,
@@ -736,6 +771,20 @@ i {
 #calendar section .info-show h5 {
   font-size: 1.3em;
   font-weight: bold;
+}
+@media (max-width: 1240px) {
+  #calendar section .info-show h3 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  #calendar section .info-show h4 {
+    font-size: 1em;
+    color: #fff;
+  }
+  #calendar section .info-show h5 {
+    font-size: 1em;
+    font-weight: bold;
+  }
 }
 #calendar section #googleMap {
   -webkit-filter: grayscale(100%);

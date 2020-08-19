@@ -1,55 +1,81 @@
 /* Members */
 #members {
     section {
-        display: flex;
-        flex-direction: column;
+        max-width: 100%;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-rows: 1fr;
+        grid-gap: .5rem;
+        grid-template-areas:
+            "first . second"
+            ".    third    ."
+            "fourth . fifth";
+        @media (max-width: $breakpoint-desktop) {
+            grid-template-areas:
+            "first"
+            "second"
+            "third"
+            "fourth"
+            "fifth"
+        }
 
-        .member-row {
-            width: 80%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            margin: 10px auto;
+        padding: 20px;
 
-            &:nth-child(2) {
-                justify-content: center;
-            }
+        #member-1 {
+            grid-area: first;
+        }
 
-            .container-member {
-                .pseudo {
-                    display: block;
-                    background: $bg-opac;
-                    color: $fg;
-                    margin: 10px;
-                    padding: 65px;
-                    position: relative;
+        #member-2 {
+            grid-area: second;
+        }
 
-                    &:before {
-                        border: 5px solid $bg;
-                        content: "";
-                        position: absolute;
-                        top: -10px;
-                        bottom: -10px;
-                        left: -10px;
-                        right: -10px;
-                    }
+        #member-3 {
+            grid-area: third;
+        }
 
-                    &:hover {
-                        transition: background-color 1s ease;
-                        cursor: pointer;
-                        background-color: $bg-full-opac;
-                    }
+        #member-4 {
+            grid-area: fourth;
+        }
 
-                    p {
-                        font-size: 1.3em;
-                        text-align: center;
-                        font-weight: bold;
-                        margin-top: 14px;
-                        margin: 0 auto;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        letter-spacing: 0.1em;
-                    }
+        #member-5 {
+            grid-area: fifth;
+        }
+
+
+        .container-member {
+            .pseudo {
+                display: block;
+                background: $bg-opac;
+                color: $fg;
+                margin: 10px;
+                padding: 65px;
+                position: relative;
+
+                &:before {
+                    border: 5px solid $bg;
+                    content: "";
+                    position: absolute;
+                    top: -10px;
+                    bottom: -10px;
+                    left: -10px;
+                    right: -10px;
+                }
+
+                &:hover {
+                    transition: background-color 1s ease;
+                    cursor: pointer;
+                    background-color: $bg-full-opac;
+                }
+
+                p {
+                    font-size: 1.3em;
+                    text-align: center;
+                    font-weight: bold;
+                    margin-top: 14px;
+                    margin: 0 auto;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    letter-spacing: 0.1em;
                 }
             }
         }
@@ -70,7 +96,7 @@
     .modal-body {
         color: $fg;
         background-color: $bg-opac;
-    
+
     }
 
     #img-member {

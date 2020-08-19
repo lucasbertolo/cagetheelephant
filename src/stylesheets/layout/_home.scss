@@ -9,7 +9,11 @@
         letter-spacing: -3px;
         line-height: 1;
         text-shadow: $shadow-fg 3px 2px 0;
-        font-size: 4em;
+        font-size: 3.6em;
+        padding-top: 15px;
+        @media (max-width: $breakpoint-desktop) {
+            font-size: 2.3em;
+        }
     }
 
     .moon {
@@ -19,6 +23,10 @@
         box-shadow: 15px 15px 0 0 $fg;
         margin: 0 auto;
         margin-top: 10%;
+
+        @media (max-width: $breakpoint-desktop) {
+            margin-top: 200px;
+        }
     }
 
     .title {
@@ -50,7 +58,7 @@
             content: "";
             position: absolute;
             left: 41%;
-            bottom: 95%;
+            top: 0;
             height: 1px;
             width: 20%;
             /* or 100px */

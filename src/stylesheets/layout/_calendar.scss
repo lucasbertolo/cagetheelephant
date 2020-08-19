@@ -1,19 +1,20 @@
 /* Calendar */
 
 #calendar {
-    height: 100vh;
     section {
-        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $breakpoint-desktop) {
+            width: 100%;
+        }
 
         #decrease-concert,
         #increase-concert {
-            width: 15%;
             height: 80%;
-            float: left;
             font-size: 6em;
             text-align: center;
             color: $bg-opac;
-            margin-top: 23%;
         }
 
         #arr-dec:hover,
@@ -23,22 +24,18 @@
         }
 
         .container-map {
-            width: 30%;
-            height: 80%;
+            width: 360px;
+            height: 500px;
             border: 2px solid $bg-opac;
-            margin-top: 5%;
-            float: left;
             border: solid 2px $dark-det;
         }
 
         .descr-show {
             width: 30%;
-            min-height: 40%;
             background-color: $bg-opac;
             border: solid 2px $dark-det;
             border-left: none;
-            margin-top: 15%;
-            float: left;
+            padding: 10px;
             text-align: right;
         }
 
@@ -64,6 +61,23 @@
             h5 {
                 font-size: 1.3em;
                 font-weight: bold;
+            }
+
+            @media (max-width: $breakpoint-desktop) {
+                h3 {
+                    font-size: 2em;
+                    font-weight: bold;
+                }
+    
+                h4 {
+                    font-size: 1em;
+                    color: $fg;
+                }
+    
+                h5 {
+                    font-size: 1em;
+                    font-weight: bold;
+                }
             }
         }
 

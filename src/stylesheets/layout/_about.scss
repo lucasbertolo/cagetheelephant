@@ -14,7 +14,11 @@
         border-right-color: $dark-det;
         border-bottom-color: $det;
         padding: 26px;
-        text-align: justify;     
+        text-align: justify;   
+        
+        @media (max-width: $breakpoint-desktop) {
+            width: 100%;
+        }
 
         .column-number {
             -moz-column-count: 2;
