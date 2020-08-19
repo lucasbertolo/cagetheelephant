@@ -2,7 +2,7 @@ import { videos } from '../assets/sources';
 
 function setVideo(num) {
   const video = $('#video').get(0);
-  $('#mp4Source').attr('src', `/src/assets/videos/${videos[num].src}`);
+  $('#mp4Source').attr('src', `/cagetheelephant/src/assets/videos/${videos[num].src}`);
   $('#music-name').text(videos[num].name);
   $('#disco-name').text(videos[num].disco);
   $('#play').find($('.fa')).removeClass('fa-play').addClass('fa-pause');
