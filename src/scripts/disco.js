@@ -1,11 +1,10 @@
 import { disco } from '../assets/sources';
 
 export const setDisco = (index) => () => {
-  const modal = document.querySelector('#modal-disco');
-  modal.style.display = 'block';
-  $('#title-disco').html(disco[index].title);
-  $('#musics').html(disco[index].data);
-  $('#link-album').attr('href', disco[index].link);
+  document.querySelector('#title-disco').innerHTML = disco[index].title;
+  document.querySelector('#musics').innerHTML = disco[index].data;
+  document.querySelector('#link-album').setAttribute('href', disco[index].link);
+  document.querySelector('#modal-disco').style.display = 'block';
 };
 
 export const closeModal = () => {

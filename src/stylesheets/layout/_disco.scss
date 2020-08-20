@@ -114,15 +114,11 @@
         text-decoration: none;
         
         &:visited ,
-        &:active{
-            color: $bg;
-        }
-
+        &:active,
         &:hover,
         &:link{
-            color: $fg;
-        }
-        
+            color: $bg;
+        }        
     }
 
     .btn {
@@ -132,8 +128,7 @@
         cursor: pointer;
 
         &:hover {
-            background-color: $det;
-            color: $fg;
+            opacity: 0.6;
         }
     }
 }

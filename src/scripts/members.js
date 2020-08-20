@@ -3,13 +3,11 @@ import { members } from '../assets/sources';
 
 export const setMember = (name) => () => {
   const infoMember = members.find((s) => s.name.toLowerCase().split(' ')[0] === name);
-  const modal = document.querySelector('#modal-members');
-  modal.style.display = 'block';
 
-  $('#name-member').html(infoMember.name);
-  $('#img-member').attr('src', infoMember.img);
-  $('#job').html(infoMember.instrument);
-  $('#bio').html(infoMember.bio);
+  document.querySelector('#modal-members').style.display = 'block';
+  document.querySelector('#name-member').innerHTML = infoMember.name;
+  document.querySelector('#job').innerHTML = infoMember.instrument;
+  document.querySelector('#bio').innerHTML = infoMember.bio;
 };
 
 export const closeModal = () => {

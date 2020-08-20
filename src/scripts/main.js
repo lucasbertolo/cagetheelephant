@@ -39,6 +39,9 @@ document
   .querySelector('#back')
   .addEventListener('click', () => playVideo(false));
 document
+  .querySelector('#forward')
+  .addEventListener('click', playVideo);
+document
   .querySelector('#play')
   .addEventListener('click', videoPlayer);
 document

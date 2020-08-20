@@ -1,12 +1,18 @@
 import { videos } from '../assets/sources';
 
 function setVideo(num) {
-  const video = $('#video').get(0);
+  const video = document.querySelector('#video');
+  const play = document.querySelector('#play');
+
   const basePage = process.env.NODE_ENV === 'production' ? 'cagetheelephant/' : '';
-  $('#mp4Source').attr('src', `/${basePage}src/assets/videos/${videos[num].src}`);
-  $('#music-name').text(videos[num].name);
-  $('#disco-name').text(videos[num].disco);
-  $('#play').find($('.fa')).removeClass('fa-play').addClass('fa-pause');
+
+  document.querySelector('#mp4Source').setAttribute('src', `/${basePage}src/assets/videos/${videos[num].src}`);
+  document.querySelector('#music-name').textContent = videos[num].name;
+  document.querySelector('#disco-name').textContent = videos[num].disco;
+
+  play.querySelector('.fa').classList.remove('fa-play');
+  play.querySelector('.fa').classList.add('fa-pause');
+
   video.load();
   video.play();
 }
@@ -36,31 +42,31 @@ export function changeVideo() {
 }
 
 export function videoPlayer() {
-  const video = $('#video').get(0);
+  const video = document.querySelector('#video');
+  const play = document.querySelector('#play');
 
   if (video.paused) {
     video.play();
-    $(this).find($('.fa')).removeClass('fa-play').addClass('fa-pause');
+    play.querySelector('.fa').classList.remove('fa-play');
+    play.querySelector('.fa').classList.add('fa-pause');
   } else {
     video.pause();
-    $(this).find($('.fa')).removeClass('fa-pause').addClass('fa-play');
+    play.querySelector('.fa').classList.remove('fa-pause');
+    play.querySelector('.fa').classList.add('fa-play');
   }
 }
 
 export function handleVolume() {
-  const video = $('#video').get(0);
+  const video = document.querySelector('#video');
+  const volume = document.querySelector('#volume');
 
   if (!video.muted) {
     video.muted = true;
-    $(this)
-      .find($('.fa'))
-      .removeClass('fa-volume-up')
-      .addClass('fa-volume-off');
+    volume.querySelector('.fa').classList.remove('fa-volume-up');
+    volume.querySelector('.fa').classList.add('fa-volume-off');
   } else {
     video.muted = false;
-    $(this)
-      .find($('.fa'))
-      .removeClass('fa-volume-off')
-      .addClass('fa-volume-up');
+    volume.querySelector('.fa').classList.remove('fa-volume-off');
+    volume.querySelector('.fa').classList.add('fa-volume-up');
   }
 }
