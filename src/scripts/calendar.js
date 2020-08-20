@@ -1,45 +1,55 @@
 import { concerts } from '../assets/sources';
 
-let geocoder;
-let map;
-let position = 'Las Vegas, NV';
+// let geocoder;
+// let map;
+// let position = 'Las Vegas, NV';
 
-export function initMap() {
-  const mapOptions = {
-    center: new google.maps.LatLng(40.7058316, -74.2581844, 10),
-    zoom: 11,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-  };
+// export function initMap() {
+//   const mapOptions = {
+//     center: new google.maps.LatLng(40.7058316, -74.2581844, 10),
+//     zoom: 11,
+//     mapTypeId: google.maps.MapTypeId.ROADMAP,
+//   };
 
-  map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
-  geocoder = new google.maps.Geocoder();
-}
+//   map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
+//   geocoder = new google.maps.Geocoder();
+// }
 
-export function changeMarker() {
-  const address = position;
-  geocoder.geocode({ address }, (results, status) => {
-    if (status === google.maps.GeocoderStatus.OK) {
-      map.setCenter(results[0].geometry.location);
-      google.maps.Marker({
-        map,
-        position: results[0].geometry.location,
-      });
-    // eslint-disable-next-line no-console
-    } else console.log(`Geocode was not successful for the following reason: ${status}`);
-  });
+// export function changeMarker() {
+//   const address = position;
+//   geocoder.geocode({ address }, (results, status) => {
+//     if (status === google.maps.GeocoderStatus.OK) {
+//       map.setCenter(results[0].geometry.location);
+//       google.maps.Marker({
+//         map,
+//         position: results[0].geometry.location,
+//       });
+//     // eslint-disable-next-line no-console
+//     } else console.log(`Geocode was not successful for the following reason: ${status}`);
+//   });
+// }
+
+function animateDescription() {
+  document.querySelector('.descr-show').classList.add('fadeOutWidth');
+  setTimeout(() => {
+    document.querySelector('.descr-show').style.width = '15%';
+  }, 100);
+  setTimeout(() => {
+    document.querySelector('.descr-show').classList.remove('fadeOutWidth');
+    document.querySelector('.descr-show').classList.add('fadeInWidth');
+    document.querySelector('.descr-show').style.width = '30%';
+  }, 700);
 }
 
 export function setConcert(index) {
   const { place, date, address } = concerts[index];
   const day = date.getDay();
   const month = date.toLocaleString('default', { month: 'short' });
-  $('.descr-show').css('display', 'none');
-  $('#data-show').html(`${day} ${month}`);
-  $('#nome-show').html(place);
-  $('#local-show').html(address);
-  position = address;
-  changeMarker();
-  $('.descr-show').show(700);
+
+  animateDescription();
+  document.querySelector('#data-show').innerHTML = `${day} ${month}`;
+  document.querySelector('#nome-show').innerHTML = place;
+  document.querySelector('#local-show').innerHTML = address;
 }
 
 function increaseCounter(counter) {

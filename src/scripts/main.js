@@ -1,54 +1,75 @@
 import { videoPlayer, changeVideo, handleVolume } from './video';
-import { setHover, removeHover, handleSmoothScroll } from './scroll';
+import { onScroll, SmoothVerticalScrolling } from './scroll';
 import * as disco from './disco';
 import * as members from './members';
-import { handleConcerts, changeMarker, initMap } from './calendar';
+import { handleConcerts } from './calendar';
 
-$(window).on('load', () => {
-  initMap();
-  window.addEventListener('load', changeMarker);
+/* EVENTS */
+
+// SCROLL
+
+const sections = ['home', 'about', 'members', 'disco', 'calendar', 'contact'];
+
+sections.forEach((section) => {
+  document
+    .querySelector(`#nav-${section}`)
+    .addEventListener('click', () => SmoothVerticalScrolling(section, 475));
 });
 
-$(document).ready(() => {
-  $('a').on('click', handleSmoothScroll);
+const scroll = onScroll();
+window.onscroll = () => scroll();
 
-  // VIDEO
-  const playVideo = changeVideo();
+// MODALS
 
-  document.getElementById('modal-members').addEventListener('click', members.closeModal);
-  document.getElementById('modal-disco').addEventListener('click', disco.closeModal);
+document
+  .querySelector('#modal-members')
+  .addEventListener('click', members.closeModal);
 
-  $('#video').on('ended', playVideo);
-  $('#forward').on('click', playVideo);
-  $('#back').on('click', () => playVideo(false));
-  $('#play').on('click', videoPlayer);
-  $('#volume').on('click', handleVolume);
+document
+  .querySelector('#modal-disco')
+  .addEventListener('click', disco.closeModal);
 
-  // SCROLLSPY
-  $('#home').hover(setHover('home'), removeHover('home'));
-  $('#about').hover(setHover('about'), removeHover('about'));
-  $('#members').hover(setHover('members'), removeHover('members'));
-  $('#disco').hover(setHover('disco'), removeHover('disco'));
-  $('#calendar').hover(setHover('calendar'), removeHover('calendar'));
-  $('#contact').hover(setHover('contact'), removeHover('contact'));
+// VIDEO
+const playVideo = changeVideo();
 
-  // MEMBERS
-  $('#member-1').on('click', members.setMember('brad'));
-  $('#member-2').on('click', members.setMember('daniel'));
-  $('#member-3').on('click', members.setMember('jared'));
-  $('#member-4').on('click', members.setMember('matthan'));
-  $('#member-5').on('click', members.setMember('matt'));
+document
+  .querySelector('#video')
+  .addEventListener('onended', playVideo);
+document
+  .querySelector('#back')
+  .addEventListener('click', () => playVideo(false));
+document
+  .querySelector('#play')
+  .addEventListener('click', videoPlayer);
+document
+  .querySelector('#volume')
+  .addEventListener('click', handleVolume);
 
-  // DISCO
-  $('#disco-1').on('click', disco.setDisco(0));
-  $('#disco-2').on('click', disco.setDisco(1));
-  $('#disco-3').on('click', disco.setDisco(2));
-  $('#disco-4').on('click', disco.setDisco(3));
+// MEMBERS
 
-  // CALENDAR
+const names = ['brad', 'daniel', 'jared', 'matthan', 'matt'];
 
-  const displayConcerts = handleConcerts();
+for (let i = 1; i <= names.length; i++) {
+  document
+    .querySelector(`#member-${i}`)
+    .addEventListener('click', members.setMember(names[i - 1]));
+}
 
-  $('#increase-concert').on('click', displayConcerts(false));
-  $('#decrease-concert').on('click', displayConcerts(true));
-});
+// DISCO
+
+for (let i = 0; i < 4; i++) {
+  document
+    .querySelector(`#disco-${i + 1}`)
+    .addEventListener('click', disco.setDisco(i));
+}
+
+// CALENDAR
+
+const displayConcerts = handleConcerts();
+
+document
+  .querySelector('#increase-concert')
+  .addEventListener('click', displayConcerts(false));
+document
+  .querySelector('#decrease-concert')
+  .addEventListener('click', displayConcerts(true));
