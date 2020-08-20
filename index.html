@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html xmlns="https://www.w3.org/1999/xhtml" lang="en">
-
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <title>Cage the elephant</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Website tribute to the band Cage the Elephant.">
-    <link rel="icon" type="image/png" href="src/assets/images/favicon.ico"/>
-    <link rel="preload" href="src/assets/fonts/opensans-regular-webfont.woff" as="font" crossorigin="anonymous">
-    <link rel="preload" href="src/assets/fonts/opensans-italic-webfont.woff" as="font" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="src/assets/images/favicon.ico"/>  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-    <!-- <link rel="stylesheet" href="src/stylesheets/bootstrap.min.css"> -->
     <link rel="stylesheet" href="dist/main.css">
 </head>
 
@@ -30,12 +26,8 @@
             <a target="_blank" href="https://www.youtube.com/user/cagetheelephant" rel="noreferrer"><i class="fa fa-youtube" aria-hidden="true"></i></a>
         </section>
         <section class="music-description">
-            <span>
-                <h3 id="music-name">Cigarrete Daydreams</h3>
-            </span>
-            <span>
-                <h4 id="disco-name">Melophobia</h4>
-            </span>
+            <h3 id="music-name">Cigarrete Daydreams</h3>
+            <h4 id="disco-name">Melophobia</h4>
         </section>
         <section class="controls">
             <span id="play"><i class="fa fa-pause" aria-hidden="true"></i></span>
@@ -92,17 +84,17 @@
 
     <div id="wrapper">
         <!-- Home -->
-        <main class="panel" id="home">
+        <article class="panel" id="home">
             <div class="moon"></div>
             <div class="title">
                 <h1 id="logo">Cage The Elephant</h1>
             </div>
-        </main>
+        </article>
 
         <!-- About -->
-        <main class="panel" id="about">
+        <article class="panel" id="about">
             <section>
-                <article class="column-number history">
+                <div class="column-number history">
                     <span class="header-history">
                         <p>Cage the Elephant is an American rock band from Bowling Green, 
                         Kentucky, that formed in 2006 and moved to London, England before their first 
@@ -129,13 +121,13 @@
                     them a Grammy Award nomination in 2015 for Best Alternative Music Album. 
                     Cage the Elephant's fourth album, Tell Me I'm Pretty, produced by Dan 
                     Auerbach, was released on December 18, 2015.</p>
-                </article>
+                </div>
             </section>
-        </main>
+        </article>
 
 
         <!-- Members -->
-        <main class="panel" id="members">
+        <article class="panel" id="members">
             <section>
                     <div class="container-member" id="member-1">
                         <span class="pseudo" >
@@ -163,27 +155,26 @@
                         </span>
                     </div>
             </section>
-        </main>
+        </article>
 
         <!-- Modal members -->
-        <div id="modal-members" class="modal-window">
+        <article id="modal-members" class="modal-window">
             <section class="fadeInDown">
                 <header class="modal-header">
                     <div class="close" role="presentation"> </div>
                     <h3 class="modal-title" id="name-member"></h3>
                 </header>
                 <main>
-                    <!-- <img src="https://imagizer.imageshack.com/img924/1325/27RyXM.jpg" name="aboutme" id="img-member" alt="member-cage"/> -->
                     <h4>Role:</h4>
                     <p id="job">Drummer</p>
                     <h4> Biography: </h4>
                     <p id="bio"></p>
                 </main>                
             </section>
-        </div>           
+        </article>           
 
         <!-- Disco -->
-        <div class="panel" id="disco">
+        <article class="panel" id="disco">
             <section>
                 <div class="container-disco">
                     <div id="carousel" class="rotation">
@@ -210,10 +201,10 @@
                     </div>
                 </div>
             </section>
-        </div>
+        </article>
 
         <!-- modal Disco -->
-        <div id="modal-disco" class="modal-window">
+        <article id="modal-disco" class="modal-window">
             <section class="fadeInDown">
                 <header class="modal-header">
                     <div class="close" role="presentation"> </div>
@@ -224,17 +215,17 @@
                     </table>
                 </main>   
                 <footer>
-                    <a href="https://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009" id="link-album" target="_blank" rel="noreferrer"> 
-                        <button type="button" class="btn">
+                    <button type="button" class="btn">
+                        <a href="https://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009" id="link-album" target="_blank" rel="noreferrer"> 
                             Buy Album
-                        </button>
-                    </a>
+                        </a>
+                    </button>
                 </footer>            
             </section>       
-        </div>  
+        </article>  
        
         <!-- Calendar -->
-        <div class="panel" id="calendar">
+        <article class="panel" id="calendar">
             <section>
                 <div id="decrease-concert">
                     <i class="fa fa-chevron-left" aria-hidden="true" id="arr-dec"></i>
@@ -252,10 +243,10 @@
                     <i class="fa fa-chevron-right" aria-hidden="true" id="arr-inc"></i>
                 </div>
             </section>
-        </div>
+        </article>
 
         <!-- Contact -->
-        <div class="panel" id="contact">
+        <article class="panel" id="contact">
             <section>
                 <div id="wrap">
                     <h1>Contact Us</h1>
@@ -278,10 +269,10 @@
                     </div>
                 </div>
             </section>           
-        </div>
+        </article>
     </div>
 
-    <section class="page_404">
+    <article class="page_404">
         <div class="container">
             <div class="four_zero_four_bg">
             <h1 class="text-center ">Opss</h1>
@@ -296,13 +287,13 @@
             </a>
             </div>
         </div>
-    </section>
+    </article>
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> -->
-        <script src="https://maps.googleapis.com/maps/api/js"></script>
         <script src="dist/main.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+
 </body>
 
 </html>

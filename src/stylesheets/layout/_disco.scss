@@ -76,6 +76,7 @@
         display: flex;
     }
 
+
     #musics {
         background-color: $bg-opac;
         color: $fg;
@@ -84,11 +85,13 @@
         cursor: pointer;
 
         td {
-            padding: 15px 20px;
+            padding: 15px 2px;
+            width: 100%;
         }
 
         tr:nth-child(even) {
             background-color: $det-opac;
+            width: 100%;
         }
 
         tr:hover {
@@ -102,13 +105,28 @@
 
     }
 
+    a {
+        text-decoration: none;
+        
+        &:visited ,
+        &:active{
+            color: $bg;
+        }
+
+        &:hover,
+        &:link{
+            color: $fg;
+        }
+        
+    }
+
     .btn {
         padding: 10px;
         border-radius: 10px;
         background-color: $fg;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             background-color: $det;
             color: $fg;
         }
