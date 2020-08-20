@@ -10,13 +10,14 @@
             "first . second"
             ".    third    ."
             "fourth . fifth";
+
         @media (max-width: $breakpoint-desktop) {
             grid-template-areas:
-            "first"
-            "second"
-            "third"
-            "fourth"
-            "fifth"
+                "first"
+                "second"
+                "third"
+                "fourth"
+                "fifth"
         }
 
         padding: 20px;
@@ -68,6 +69,7 @@
                 }
 
                 p {
+                    font-family: $font-hand;
                     font-size: 1.3em;
                     text-align: center;
                     font-weight: bold;
@@ -82,9 +84,12 @@
     }
 }
 
-#modal-members{
-     h4{
+#modal-members {
+    h3 {
+        font-family: $font-hand;
+    }
+
+    h4 {
         color: $shadow-fg;
     }
 }
-

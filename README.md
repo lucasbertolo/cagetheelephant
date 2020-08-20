@@ -6,6 +6,7 @@
 ## DevMode
 
 - npm i
+- create .env file with a variable NODE_ENV=development
 - npm run dev 
 - npm run start (keep 2 tabs open in terminal)
 

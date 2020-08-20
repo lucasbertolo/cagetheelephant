@@ -15,23 +15,27 @@
         border-bottom-color: $det;
         padding: 26px;
         text-align: justify;   
-        
+
         @media (max-width: $breakpoint-desktop) {
             width: 100%;
         }
 
-        .column-number {
+        .column-number {            
             -moz-column-count: 2;
             -webkit-column-count: 2;
             -webkit-column-gap: 55px;
             column-count: 2;
             column-gap: 55px;
+            line-height: 1.5em;
         }
 
         .header-history{
             font-size: 1.2em;
-            font-style: italic;
             color: $shadow-fg;
+
+            p{
+                font-family: $font-hand;
+            }
         }  
     }
 }
