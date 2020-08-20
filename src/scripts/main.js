@@ -1,7 +1,7 @@
 import { videoPlayer, changeVideo, handleVolume } from './video';
 import { setHover, removeHover, handleSmoothScroll } from './scroll';
-import { setDisco } from './disco';
-import { setMember } from './members';
+import * as disco from './disco';
+import * as members from './members';
 import { handleConcerts, changeMarker, initMap } from './calendar';
 
 $(window).on('load', () => {
@@ -14,6 +14,9 @@ $(document).ready(() => {
 
   // VIDEO
   const playVideo = changeVideo();
+
+  document.getElementById('modal-members').addEventListener('click', members.closeModal);
+  document.getElementById('modal-disco').addEventListener('click', disco.closeModal);
 
   $('#video').on('ended', playVideo);
   $('#forward').on('click', playVideo);
@@ -30,17 +33,17 @@ $(document).ready(() => {
   $('#contact').hover(setHover('contact'), removeHover('contact'));
 
   // MEMBERS
-  $('#member-1').on('click', setMember('brad'));
-  $('#member-2').on('click', setMember('daniel'));
-  $('#member-3').on('click', setMember('jared'));
-  $('#member-4').on('click', setMember('matthan'));
-  $('#member-5').on('click', setMember('matt'));
+  $('#member-1').on('click', members.setMember('brad'));
+  $('#member-2').on('click', members.setMember('daniel'));
+  $('#member-3').on('click', members.setMember('jared'));
+  $('#member-4').on('click', members.setMember('matthan'));
+  $('#member-5').on('click', members.setMember('matt'));
 
   // DISCO
-  $('#disco-1').on('click', setDisco(0));
-  $('#disco-2').on('click', setDisco(1));
-  $('#disco-3').on('click', setDisco(2));
-  $('#disco-4').on('click', setDisco(3));
+  $('#disco-1').on('click', disco.setDisco(0));
+  $('#disco-2').on('click', disco.setDisco(1));
+  $('#disco-3').on('click', disco.setDisco(2));
+  $('#disco-4').on('click', disco.setDisco(3));
 
   // CALENDAR
 

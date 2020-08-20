@@ -10,6 +10,7 @@
 
 .fa-instagram {
     color: $fg;
+
     &:hover {
         color: $instagram;
     }
@@ -44,5 +45,41 @@
 
     &:hover {
         color: $twitter;
+    }
+}
+
+.close {
+    display: block;
+    position: absolute;
+    border: none;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    text-indent: 4rem;
+    overflow: hidden;
+    white-space: nowrap; 
+    z-index: 1;
+
+    &:before {        
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0.75rem;
+        left: 0.75rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 100%;
+        background-position: center;
+        background-image: svg-url($close);
+        background-size: 20px 20px;
+        background-repeat: no-repeat;
+    }
+
+    &:hover {
+        &:before {
+            background-color: $det;
+        }
     }
 }

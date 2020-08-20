@@ -19,8 +19,7 @@ $footer-height: 80px;
     }
 
     .social,
-    .controls,
-    .music-description {
+    .controls {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -32,27 +31,28 @@ $footer-height: 80px;
             padding: 10px;
         }
     }
-    
+
     .controls {
         color: $fg;
 
-        i:hover{
+        i:hover {
             color: $shadow-fg;
         }
     }
 
     .music-description {
-        padding: 10px;
-        flex-direction: column;
+        height: $footer-height - 39;      
+        text-align: center ;
         color: $fg;
 
-        h5 {
+        h3 {
             &:hover {
                 color: $shadow-fg;
             }
+            margin-bottom: -10px;
         }
 
-        h6 {
+        h4 {
             &:hover {
                 color: $shadow-fg;
             }
@@ -61,5 +61,5 @@ $footer-height: 80px;
 
     @media (max-width: $breakpoint-tablet) {
         display: none;
-     }
+    }
 }

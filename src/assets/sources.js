@@ -94,43 +94,33 @@ export const disco = [
     data: `
     <tr>
         <td>Cry Baby</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Mess Around</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Sweetie Little Jean</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Too Late To Say Goodbye</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Cold Cold Cold</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Trouble</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>How Are You True</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>That's Right</td>"
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Punchin' Bag</td>"
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Portuguese Knife Fight</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     `,
 
@@ -141,46 +131,35 @@ export const disco = [
     data: `
     <tr>'
         <td>In One Ear</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>James Brown</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Ain't No Rest For The Wicked</td>"
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Tiny Little Robots</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Lotus</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Back Against The Wall</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Drones In The Valley</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Judas</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Back Stabbin' Betty</td>"
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Soil To The Sun</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
         <td>Free Love</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     `,
 
@@ -191,43 +170,33 @@ export const disco = [
     data: `
     <tr>'
         <td>Spiderhead</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Come a Little Closer</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Telescope</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>It's Just Forever</td>"
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Take It or Leave It</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Halo</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Black Widow</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Hypocrite</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Teeth</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Cigarrete Daydreams</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>
     `,
 
@@ -238,27 +207,21 @@ export const disco = [
     data: `
     <tr>'
         <td>Always Something</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Aberdeen</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Indy Kidz</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Shake Me Down</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>2024</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Sell Yourself</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Rubber Ball</td>'
@@ -266,21 +229,16 @@ export const disco = [
     </tr>'
     <tr>'
         <td>Right Before My Eyes</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Around My Head</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     <tr>'
         <td>Sabertooth Tiger</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
         <td>Japanese Buffalo</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
         <td>Flow</td>'
-        <td><i class='fa fa-download' aria-hidden='true'></i></td>"
     </tr>'
     `,
 

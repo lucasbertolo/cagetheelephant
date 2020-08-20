@@ -67,16 +67,15 @@
 
 /* modal disco */
 
-#modalDisco {
+#modal-disco {
     .modal-content {
         background-color: $bg-opac;
     }
 
-    .modal-header{
-        color: $fg;
+    .modal-header {
         display: flex;
-        justify-content: flex-end;
     }
+
     #musics {
         background-color: $bg-opac;
         color: $fg;
@@ -85,7 +84,7 @@
         cursor: pointer;
 
         td {
-            padding: 8px;
+            padding: 15px 20px;
         }
 
         tr:nth-child(even) {
@@ -99,6 +98,19 @@
         td:nth-child(1):before {
             counter-increment: section;
             content: counter(section) " - ";
+        }
+
+    }
+
+    .btn {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: $fg;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $det;
+            color: $fg;
         }
     }
 }

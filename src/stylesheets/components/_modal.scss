@@ -1,0 +1,55 @@
+.modal-window {
+    display: none;
+    position: fixed;
+    background-color: $bg-opac;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    opacity: 1;
+    pointer-events: auto;
+
+    @media (max-width: $breakpoint-tablet) {
+        top: 20px;
+    }
+  
+    &>section {
+        padding: 20px;
+        width: 35vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $bg-opac;
+        max-height: 90vh;
+        overflow-y: scroll;
+        color: $fg;
+        font-weight: normal;
+
+        
+        @media (max-width: $breakpoint-tablet) {
+            width: 100%;
+            max-height: 100vh;
+        }
+    }
+
+    header {
+        font-weight: bold;
+        width: 100%;
+        position: relative;
+        display: flex;
+        color: $fg;
+        justify-content: space-between;
+    }
+
+    footer{
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+

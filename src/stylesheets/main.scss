@@ -1,5 +1,5 @@
 /* LIBS */
-
+@import './libs/mixins';
 @import './libs/vars';
 
 /* BASE */
@@ -13,6 +13,7 @@
 @import './components/animate';
 @import './components/icon';
 @import './components/tooltip';
+@import './components/modal';
  
 /* LAYOUT */
 

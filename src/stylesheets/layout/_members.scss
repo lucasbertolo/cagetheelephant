@@ -82,25 +82,9 @@
     }
 }
 
-#biography {
-    .modal-content {
-        background-color: $bg-opac;
-    }
-
-    .modal-header {
-        color: $fg;
-        display: flex;
-        justify-content: flex-end;
-    }
-
-    .modal-body {
-        color: $fg;
-        background-color: $bg-opac;
-
-    }
-
-    #img-member {
-        max-height: 200px;
-        padding: 20px;
+#modal-members{
+     h4{
+        color: $shadow-fg;
     }
 }
+
