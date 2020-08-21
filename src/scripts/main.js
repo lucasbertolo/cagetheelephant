@@ -7,7 +7,7 @@ import { concerts } from '../assets/sources';
 
 /* EVENTS */
 
-window.initMap = () => {
+function initMap() {
   const { coords } = concerts[0];
   // eslint-disable-next-line no-undef
   const map = new google.maps.Map(
@@ -17,10 +17,10 @@ window.initMap = () => {
   // eslint-disable-next-line no-undef
   const marker = new google.maps.Marker({ position: coords, map });
   return marker;
-};
+}
 
 window.onload = () => {
-  window.initMap();
+  initMap();
 };
 
 // SCROLL
