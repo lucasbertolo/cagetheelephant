@@ -119,7 +119,8 @@ export const disco = [
     </tr>
     `,
 
-    link: 'https://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009',
+    link:
+      'https://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009',
   },
   {
     title: 'Cage The Elephant',
@@ -158,7 +159,8 @@ export const disco = [
     </tr>
     `,
 
-    link: 'https://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009',
+    link:
+      'https://www.fnac.pt/Cage-The-Elephant-Tell-Me-I-m-Pretty-Vinil/a943009',
   },
   {
     title: 'Melophobia',
@@ -236,29 +238,34 @@ export const disco = [
     </tr>
     `,
 
-    link: 'https://www.fnac.pt/Cage-The-Elephant-Thank-You-Happy-Birthday-lp-imp-Vinil/a358348',
+    link:
+      'https://www.fnac.pt/Cage-The-Elephant-Thank-You-Happy-Birthday-lp-imp-Vinil/a358348',
   },
 ];
 
 export const concerts = [
   {
-    date: new Date(),
+    date: new Date('2020-10-17T03:24:00'),
     place: 'Daytime Village',
     address: 'Las Vegas, NV, US',
+    coords: { lat: 36.1699, lng: -115.1398 },
   },
   {
-    date: new Date(),
+    date: new Date('2020-11-13T03:24:00'),
     place: 'Austin City Limits',
     address: 'Austin, TX, US',
+    coords: { lat: 30.2672, lng: -97.7431 },
   },
   {
-    date: new Date(),
+    date: new Date('2020-12-11T03:24:00'),
     place: 'Bridge School Benefit',
     address: 'Mountain View, CA, US',
+    coords: { lat: 37.3861, lng: -122.0839 },
   },
   {
-    date: new Date(),
+    date: new Date('2020-12-18T03:24:00'),
     place: 'Vodoo Festival 2016',
     address: 'New Orleans, LA, US',
+    coords: { lat: 29.9511, lng: -90.0715 },
   },
 ];

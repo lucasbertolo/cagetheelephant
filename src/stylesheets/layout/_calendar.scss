@@ -1,6 +1,7 @@
 /* Calendar */
 
 #calendar {
+    margin-top: 200px;
     section {
         display: flex;
         justify-content: center;
@@ -42,10 +43,9 @@
         .info-show {
 
             h3,
-            h4,
             h5 {
                 margin: 10px;
-                color: $det;
+                color: $det-cont;
             }
 
             h3 {
@@ -54,13 +54,13 @@
             }
 
             h4 {
+                margin: 10px;
                 font-size: 2em;
                 color: $fg;
             }
 
             h5 {
                 font-size: 1.3em;
-                font-weight: bold;
             }
 
             @media (max-width: $breakpoint-desktop) {

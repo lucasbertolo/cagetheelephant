@@ -1,33 +1,14 @@
 import { concerts } from '../assets/sources';
 
-// let geocoder;
-// let map;
-// let position = 'Las Vegas, NV';
-
-// export function initMap() {
-//   const mapOptions = {
-//     center: new google.maps.LatLng(40.7058316, -74.2581844, 10),
-//     zoom: 11,
-//     mapTypeId: google.maps.MapTypeId.ROADMAP,
-//   };
-
-//   map = new google.maps.Map(document.getElementById('googleMap'), mapOptions);
-//   geocoder = new google.maps.Geocoder();
-// }
-
-// export function changeMarker() {
-//   const address = position;
-//   geocoder.geocode({ address }, (results, status) => {
-//     if (status === google.maps.GeocoderStatus.OK) {
-//       map.setCenter(results[0].geometry.location);
-//       google.maps.Marker({
-//         map,
-//         position: results[0].geometry.location,
-//       });
-//     // eslint-disable-next-line no-console
-//     } else console.log(`Geocode was not successful for the following reason: ${status}`);
-//   });
-// }
+function changeMarker(coords) {
+  // eslint-disable-next-line no-undef
+  const map = new google.maps.Map(
+    document.getElementById('googleMap'), { zoom: 4, center: coords },
+  );
+  // eslint-disable-next-line no-undef
+  const marker = new google.maps.Marker({ position: coords, map });
+  return marker;
+}
 
 function animateDescription() {
   document.querySelector('.descr-show').classList.add('fadeOutWidth');
@@ -42,11 +23,15 @@ function animateDescription() {
 }
 
 export function setConcert(index) {
-  const { place, date, address } = concerts[index];
-  const day = date.getDay();
+  const {
+    place, date, address, coords,
+  } = concerts[index];
+
+  const day = date.getDate();
   const month = date.toLocaleString('default', { month: 'short' });
 
   animateDescription();
+  changeMarker(coords);
   document.querySelector('#data-show').innerHTML = `${day} ${month}`;
   document.querySelector('#nome-show').innerHTML = place;
   document.querySelector('#local-show').innerHTML = address;

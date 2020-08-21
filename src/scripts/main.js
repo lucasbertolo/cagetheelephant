@@ -3,11 +3,23 @@ import { onScroll, SmoothVerticalScrolling } from './scroll';
 import * as disco from './disco';
 import * as members from './members';
 import { handleConcerts } from './calendar';
+import { concerts } from '../assets/sources';
 
 /* EVENTS */
 
-// SCROLL
+window.initMap = () => {
+  const { coords } = concerts[0];
+  // eslint-disable-next-line no-undef
+  const map = new google.maps.Map(
+    document.getElementById('googleMap'), { zoom: 4, center: coords },
+  );
 
+  // eslint-disable-next-line no-undef
+  const marker = new google.maps.Marker({ position: coords, map });
+  return marker;
+};
+
+// SCROLL
 const sections = ['home', 'about', 'members', 'disco', 'calendar', 'contact'];
 
 sections.forEach((section) => {
@@ -20,7 +32,6 @@ const scroll = onScroll();
 window.onscroll = () => scroll();
 
 // MODALS
-
 document
   .querySelector('#modal-members')
   .addEventListener('click', members.closeModal);
@@ -34,7 +45,7 @@ const playVideo = changeVideo();
 
 document
   .querySelector('#video')
-  .addEventListener('onended', playVideo);
+  .addEventListener('ended', playVideo);
 document
   .querySelector('#back')
   .addEventListener('click', () => playVideo(false));
@@ -49,7 +60,6 @@ document
   .addEventListener('click', handleVolume);
 
 // MEMBERS
-
 const names = ['brad', 'daniel', 'jared', 'matthan', 'matt'];
 
 for (let i = 1; i <= names.length; i++) {
@@ -59,7 +69,6 @@ for (let i = 1; i <= names.length; i++) {
 }
 
 // DISCO
-
 for (let i = 0; i < 4; i++) {
   document
     .querySelector(`#disco-${i + 1}`)
@@ -67,7 +76,6 @@ for (let i = 0; i < 4; i++) {
 }
 
 // CALENDAR
-
 const displayConcerts = handleConcerts();
 
 document

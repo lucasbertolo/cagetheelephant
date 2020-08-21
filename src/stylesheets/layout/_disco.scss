@@ -1,10 +1,11 @@
 /* Disco */
 
 #disco {
+    min-height: 100vh;
+
     section {
         display: flex;
         flex-direction: column;
-        min-height: 80vh;
 
 
         .container-disco {
