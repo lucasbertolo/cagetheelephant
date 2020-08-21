@@ -19,6 +19,10 @@ window.initMap = () => {
   return marker;
 };
 
+window.onload = () => {
+  window.initMap();
+};
+
 // SCROLL
 const sections = ['home', 'about', 'members', 'disco', 'calendar', 'contact'];
 
